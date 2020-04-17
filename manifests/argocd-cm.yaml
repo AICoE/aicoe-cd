@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: argocd-cm
 data:
-  kustomize.buildOptions: '--enable_alpha_plugins'
+  kustomize.buildOptions: "--enable_alpha_plugins"
   repositories: |
     - type: git
       url: https://github.com/goern/strimzi-application.git
@@ -15,7 +15,7 @@ data:
       url: https://github.com/thoth-station/thoth-ci.git
   resource.exclusions: |
     - apiGroups:
-      - "tekton.dev/v1alpha1"
+      - "tekton.dev/v1beta1"
       kinds:
       - "PipelineRun"
       - "TaskRun"
