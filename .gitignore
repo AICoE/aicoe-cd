@@ -1,1 +1,4 @@
+.env
 application_default_credentials.json
+secrets-test.yaml
+secrets.yaml
