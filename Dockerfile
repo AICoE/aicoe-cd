@@ -30,5 +30,14 @@ COPY --from=ksops-builder /go/bin/kustomize /usr/local/bin/kustomize
 # Copy the plugin to kustomize plugin path
 COPY --from=ksops-builder /go/src/github.com/viaduct-ai/kustomize-sops/*  $KUSTOMIZE_PLUGIN_PATH/viaduct.ai/v1/${PKG_NAME}/
 
+RUN apt-get update && \
+  apt-get install -y \
+    curl \
+    gpg && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
+  curl -o /usr/local/bin/sops -L https://github.com/mozilla/sops/releases/download/v3.5.0/sops-v3.5.0.linux && \
+  chmod +x /usr/local/bin/sops
+
 # Switch back to non-root user
 USER argocd
