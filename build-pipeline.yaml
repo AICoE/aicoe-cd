@@ -2,7 +2,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: build-argocd-customization
+  name: build-aicoe-argocd-customization
 spec:
   workspaces:
     - name: shared-workspace
@@ -15,7 +15,7 @@ spec:
           workspace: shared-workspace
       params:
         - name: url
-          value: https://github.com/AICoE/argocd-customization
+          value: https://github.com/kelseyhightower/nocode
         - name: subdirectory
           value: ""
         - name: deleteExisting
@@ -30,18 +30,30 @@ spec:
           workspace: shared-workspace
       params:
         - name: IMAGE
-          value: quay.io/aicoe/argocd:v1.5.2-1
+          value: localhost:5000/nocode
         - name: TLSVERIFY
           value: "false"
 ---
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  name: build-aicoe-argocd-customization
+  generateName: build-aicoe-argocd-customization-
 spec:
   pipelineRef:
-    name: buildah-argocd-customization
+    name: build-aicoe-argocd-customization
   workspaces:
     - name: shared-workspace
       persistentvolumeclaim:
         claimName: buildah-source-pvc
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: buildah-source-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  volumeMode: Filesystem
