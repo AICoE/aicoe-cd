@@ -1,0 +1,26 @@
+namespace: aicoe-argocd
+# ArgoCD admin passwords are bcrypted (hashed).
+# You can (ab)use `htpasswd -bnBC 10 "<password>"` to generate a password
+# from cmd line using bcrypt function (-B).
+admin_password: "$2y$10$sz90EbrYgrCQXwjbwTpKEeTbaXZb4spJ8J23hg58DEI5/CCWl7DN6"
+repo_server_image: quay.io/aicoe/argocd:v1.5.2-1
+argo_cm: |
+  data:
+    kustomize.buildOptions: "--enable_alpha_plugins"
+    repositories: |
+      - type: git
+        url: https://github.com/goern/strimzi-application.git
+      - type: git
+        url: https://github.com/goern/thoth-application.git
+      - type: git
+        url: https://github.com/thoth-station/thoth-application.git
+      - type: git
+        url: https://github.com/thoth-station/thoth-ci.git
+    resource.exclusions: |
+      - apiGroups:
+        - "tekton.dev/v1beta1"
+        kinds:
+        - "PipelineRun"
+        - "TaskRun"
+        clusters:
+        - "*"

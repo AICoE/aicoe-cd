@@ -4,6 +4,25 @@ kind: Route
 metadata:
   labels:
     app.kubernetes.io/component: server
+    app.kubernetes.io/name: argocd-server
+    app.kubernetes.io/part-of: argocd
+  name: argocd-server
+spec:
+  port:
+    targetPort: http
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: argocd-server
+
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app.kubernetes.io/component: server
     app.kubernetes.io/name: argocd-server-metrics
     app.kubernetes.io/part-of: argocd
   name: argocd-server-metrics
@@ -13,8 +32,8 @@ spec:
   to:
     kind: Service
     name: argocd-server-metrics
-    weight: 100
   wildcardPolicy: None
+
 ---
 apiVersion: route.openshift.io/v1
 kind: Route
@@ -30,5 +49,4 @@ spec:
   to:
     kind: Service
     name: argocd-metrics
-    weight: 100
   wildcardPolicy: None

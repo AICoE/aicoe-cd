@@ -1,0 +1,11 @@
+apiVersion: v1
+stringData:
+  admin.password: "{{ admin_password }}"
+  admin.passwordMtime: {{ lookup('pipe','date +%FT%T%Z') }}
+kind: Secret
+metadata:
+  labels:
+    app.kubernetes.io/name: argocd-secret
+    app.kubernetes.io/part-of: argocd
+  name: argocd-secret
+type: Opaque
