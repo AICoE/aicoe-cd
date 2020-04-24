@@ -49,9 +49,9 @@ This repository is containing additions to the ArgoCD container image:
 
 * KSOPS
 
-### KOPS
+### KSOPS
 
-To add KOPS support we just follow [the README](https://github.com/viaduct-ai/kustomize-sops#argo-cd-integration-)
+To add KSOPS support we just follow [the README](https://github.com/viaduct-ai/kustomize-sops#argo-cd-integration-)
 
 ### Releases
 
