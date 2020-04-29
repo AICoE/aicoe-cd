@@ -16,6 +16,10 @@
       include_vars:
         file: "vars/{{ target_env }}-vars.yaml"
 
+    - name: Verify cluster object deployment
+      set_fact:
+        deploy_cluster_objects: "{{ deploy_cluster_objects | default(True) }}"
+
     - name: Load gpg key
       include_vars:
         file: "vars/gpg-keys/{{ target_env}}-key.yaml"
