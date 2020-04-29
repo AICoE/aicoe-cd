@@ -30,12 +30,25 @@ ansible-playbook --ask-vault-pass playbook.yaml \
 ### Deploying to Production
 
 Run the following command from the root of this repository to deploy the
-ArgoCD project to production:
+ArgoCD project to production (need cluster-admin):
 
 ```bash
 pipenv shell
 pipenv install
 ansible-playbook --ask-vault-pass playbook.yaml \
+  -e kubeconfig=$HOME/.kube/config \
+  -e target_env=prod
+```
+
+### Ignore cluster objects
+If you want to just update deployment/configs or other namespace scoped objects
+without requiring cluster-admin, just add the additional `deploy_cluster_objects=False` var: 
+
+```bash
+pipenv shell
+pipenv install
+ansible-playbook --ask-vault-pass playbook.yaml \
+  -e deploy_cluster_objects=False \
   -e kubeconfig=$HOME/.kube/config \
   -e target_env=prod
 ```
