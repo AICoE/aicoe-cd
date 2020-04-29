@@ -2,7 +2,6 @@
 
 This repository contains the necessary artifacts to deploy ArgoCD to dev and prod.
 
-
 ## Deployment Instructions
 
 ### Prerequisites
@@ -41,7 +40,7 @@ ansible-playbook --ask-vault-pass playbook.yaml \
   -e target_env=prod
 ```
 
-## Dev Notes 
+## Dev Notes
 
 ### AICoE's ArgoCD container image
 
@@ -62,41 +61,46 @@ The container image is build manually and pushed to [Quay](https://quay.io/repos
 To decrypt secrets we use some GCP key store, therefore we need to add the default application credentials that will
 enable ArgoCD to access the keystore:
 
-```
+```bash
 oc -n argocd create secret  generic  gcp --from-file=application-default-credentials=application_default_credentials.json
 ```
 
 ### Creating a gpg secret
 
 Export the key
-```
+
+```bash
 gpg --export-secret-keys "${KEY_ID}" | base64 > private.asc
 ```
-Create a `${target-env}-key.yaml` and copy the contents of `private.asc` onto the field. 
+
+Create a `${target-env}-key.yaml` and copy the contents of `private.asc` onto the field.
 
 `${target-env}-key.yaml`:
+
 ```yaml
-gpg_key: | 
+gpg_key: |
     # Contents of private.asc
 ```
 
-Encrypt `${target-env}-key.yaml `using ansible-vault: 
-```
+Encrypt `${target-env}-key.yaml` using ansible-vault:
+
+```yaml
 ansible-vault encrypt ${target-env}-key.yaml
 ```
 
-Use the appropriate vault pass when prompted to encrypt the file and store 
-the file in `vars/gpg-keys`. 
-
+Use the appropriate vault pass when prompted to encrypt the file and store
+the file in `vars/gpg-keys`.
 
 ### Logging into ArgoCD
-```
+
+```bash
 # Login to ArgoCD
 ARGOCD_ROUTE=$(oc get route argocd-server -o jsonpath='{.spec.host}')
 argocd --insecure --grpc-web login ${ARGOCD_ROUTE}:443 --username admin --password ${ARGOCD_SERVER_PASSWORD}
 ```
 
 ### Change Admin Password
-```
+
+```bash
 argocd --insecure --grpc-web --server ${ARGOCD_ROUTE}:443 account update-password --current-password ${ARGOCD_SERVER_PASSWORD} --new-password
 ```
