@@ -6,6 +6,22 @@ admin_password: "$2y$10$18l2wN8YokC8rghRWbrhlu4kXCP7P9oJ7L45GHJ4RWsSR7zKXmnXy"
 repo_server_image: quay.io/aicoe/argocd:v1.5.2-1
 argo_cm: |
   data:
+    url: {{ argocd_url }}
+    dex.config: |
+      connectors:
+        # OpenShift
+        - type: openshift
+          id: openshift
+          name: OpenShift
+          config:
+            issuer: {{ issuer }}
+            clientID: {{ clientID }}
+            clientSecret: {{ clientSecret }}
+            redirectURI: {{ redirectURI }}
+            insecureCA: true
+            groups:
+              - data-hub-openshift-admins
+              - aicoe-thoth-devops
     kustomize.buildOptions: "--enable_alpha_plugins"
     repositories: |
       - type: git
