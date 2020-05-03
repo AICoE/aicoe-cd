@@ -55,6 +55,17 @@
         - objects/namespace-install.yaml
         - objects/argocd_server_route.yaml
 
+    - name: Deploy the ArgoCD projects
+      k8s:
+        kubeconfig: "{{ kubeconfig }}"
+        state: present
+        namespace: "{{ namespace }}"
+        verify_ssl: no
+        definition: "{{ lookup('template', item) }}"
+      with_items:
+        - objects/projects/projects.yaml
+      when: target_env == 'prod'
+
     - name: Get OpenShift API server
       shell: oc whoami --show-server
       register: api_server
