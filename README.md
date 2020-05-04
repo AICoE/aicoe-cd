@@ -41,6 +41,7 @@ ansible-playbook --ask-vault-pass playbook.yaml \
 ```
 
 ### Ignore cluster objects
+
 If you want to just update deployment/configs or other namespace scoped objects
 without requiring cluster-admin, just add the additional `cluster_admin=False` var: 
 
@@ -107,9 +108,11 @@ the file in `vars/gpg-keys`.
 ### Logging into ArgoCD
 
 ```bash
-# Login to ArgoCD
 ARGOCD_ROUTE=$(oc get route argocd-server -o jsonpath='{.spec.host}')
+# Login to ArgoCD as admin user
 argocd --insecure --grpc-web login ${ARGOCD_ROUTE}:443 --username admin --password ${ARGOCD_SERVER_PASSWORD}
+# Login to ArgoCD via SSO
+argocd --insecure --grpc-web login ${ARGOCD_ROUTE}:443 --sso
 ```
 
 ### Change Admin Password
