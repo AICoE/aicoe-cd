@@ -42,13 +42,13 @@ ansible-playbook --ask-vault-pass playbook.yaml \
 
 ### Ignore cluster objects
 If you want to just update deployment/configs or other namespace scoped objects
-without requiring cluster-admin, just add the additional `deploy_cluster_objects=False` var: 
+without requiring cluster-admin, just add the additional `cluster_admin=False` var: 
 
 ```bash
 pipenv shell
 pipenv install
 ansible-playbook --ask-vault-pass playbook.yaml \
-  -e deploy_cluster_objects=False \
+  -e cluster_admin=False \
   -e kubeconfig=$HOME/.kube/config \
   -e target_env=prod
 ```

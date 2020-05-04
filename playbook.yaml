@@ -18,7 +18,7 @@
 
     - name: Verify cluster object deployment
       set_fact:
-        deploy_cluster_objects: "{{ deploy_cluster_objects | default(True) }}"
+        cluster_admin: "{{ cluster_admin | default(True) }}"
 
     - name: Load gpg key
       include_vars:
@@ -64,7 +64,7 @@
         definition: "{{ lookup('template', item) }}"
       with_items:
         - objects/projects/projects.yaml
-      when: target_env == 'prod'
+      when: (target_env == 'prod') and (cluster_admin | bool)
 
     - name: Get OpenShift API server
       shell: oc whoami --show-server
