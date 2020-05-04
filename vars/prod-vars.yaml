@@ -40,3 +40,41 @@ argo_cm: |
         - "TaskRun"
         clusters:
         - "*"
+
+argo_rbac_cm: |
+  data:
+    policy.csv: |
+      p, role:argocd-admin, certificates, get, *, allow
+      p, role:argocd-admin, certificates, create, *, allow
+      p, role:argocd-admin, certificates, update, *, allow
+      p, role:argocd-admin, clusters, get, *, allow
+      p, role:argocd-admin, clusters, create, *, allow
+      p, role:argocd-admin, clusters, update, *, allow
+      p, role:argocd-admin, repositories, get, *, allow
+      p, role:argocd-admin, repositories, create, *, allow
+      p, role:argocd-admin, repositories, update, *, allow
+      p, role:argocd-admin, projects, get, *, allow
+      p, role:argocd-admin, projects, create, *, allow
+      p, role:argocd-admin, projects, update, *, allow
+      p, role:argocd-admin, accounts, get, *, allow
+      p, role:argocd-admin, accounts, update, *, allow
+
+      p, role:thoth-admin, applications, get, thoth/*, allow
+      p, role:thoth-admin, applications, create, thoth/*, allow
+      p, role:thoth-admin, applications, update, thoth/*, allow
+      p, role:thoth-admin, applications, delete, thoth/*, allow
+      p, role:thoth-admin, applications, sync, thoth/*, allow
+      p, role:thoth-admin, applications, override, thoth/*, allow
+      p, role:thoth-admin, applications, action/*, thoth/*, allow
+      g, aicoe-thoth-devops, role:argocd-admin
+      g, aicoe-thoth-devops, role:thoth-admin
+
+      p, role:data-hub-admin, applications, get, data-hub/*, allow
+      p, role:data-hub-admin, applications, create, data-hub/*, allow
+      p, role:data-hub-admin, applications, update, data-hub/*, allow
+      p, role:data-hub-admin, applications, delete, data-hub/*, allow
+      p, role:data-hub-admin, applications, sync, data-hub/*, allow
+      p, role:data-hub-admin, applications, override, data-hub/*, allow
+      p, role:data-hub-admin, applications, action/*, data-hub/*, allow
+      g, data-hub-openshift-admins, role:argocd-admin
+      g, data-hub-openshift-admins, role:data-hub-admin

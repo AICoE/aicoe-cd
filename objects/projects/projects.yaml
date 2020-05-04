@@ -1,0 +1,24 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: thoth
+  namespace: {{ namespace }}
+spec:
+  destinations:
+  - namespace: '*'
+    server: '*'
+  sourceRepos:
+  - '*'
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: data-hub
+  namespace: {{ namespace }}
+spec:
+  destinations:
+  - namespace: '*'
+    server: '*'
+  sourceRepos:
+  - '*'
