@@ -34,7 +34,7 @@ argo_cm: |
         url: https://github.com/thoth-station/thoth-ci.git
     resource.exclusions: |
       - apiGroups:
-        - "tekton.dev/v1beta1"
+        - "tekton.dev"
         kinds:
         - "PipelineRun"
         - "TaskRun"
