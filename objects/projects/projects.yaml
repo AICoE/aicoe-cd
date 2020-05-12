@@ -6,10 +6,10 @@ metadata:
   namespace: {{ namespace }}
 spec:
   destinations:
-  - namespace: '*'
-    server: '*'
+    - namespace: '*'
+      server: '*'
   sourceRepos:
-  - '*'
+    - '*'
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
@@ -18,7 +18,7 @@ metadata:
   namespace: {{ namespace }}
 spec:
   destinations:
-  - namespace: '*'
-    server: '*'
+    - namespace: '*'
+      server: '*'
   sourceRepos:
-  - '*'
+    - '*'

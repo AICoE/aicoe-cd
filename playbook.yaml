@@ -22,7 +22,7 @@
 
     - name: Load gpg key
       include_vars:
-        file: "vars/gpg-keys/{{ target_env}}-key.yaml"
+        file: "vars/gpg-keys/{{ target_env }}-key.yaml"
 
     - name: Ensure that the required variables are set
       fail:
@@ -40,7 +40,7 @@
         api_version: v1
         kind: Namespace
         state: present
-        verify_ssl: no
+        verify_ssl: "no"
       when: target_env == 'dev'
 
     - name: Deploy the ArgoCD objects to Openshift
@@ -48,7 +48,7 @@
         kubeconfig: "{{ kubeconfig }}"
         state: present
         namespace: "{{ namespace }}"
-        verify_ssl: no
+        verify_ssl: "no"
         definition: "{{ lookup('template', item) }}"
       with_items:
         - objects/secret.yaml
@@ -60,19 +60,19 @@
         kubeconfig: "{{ kubeconfig }}"
         state: present
         namespace: "{{ namespace }}"
-        verify_ssl: no
+        verify_ssl: "no"
         definition: "{{ lookup('template', 'objects/clusters.yaml') }}"
       with_items: "{{ clusters | default([]) }}"
       loop_control:
         loop_var: cluster
-      no_log: True
+      no_log: "True"
 
     - name: Deploy the ArgoCD projects
       k8s:
         kubeconfig: "{{ kubeconfig }}"
         state: present
         namespace: "{{ namespace }}"
-        verify_ssl: no
+        verify_ssl: "no"
         definition: "{{ lookup('template', item) }}"
       with_items:
         - objects/projects/projects.yaml
@@ -88,7 +88,7 @@
         kind: ServiceAccount
         name: argocd-dex-server
         namespace: "{{ namespace }}"
-        verify_ssl: no
+        verify_ssl: "no"
       register: dex_sa
 
     - name: Get Dex Service Account Secrets
@@ -97,7 +97,7 @@
         kind: Secret
         name: "{{ item.name }}"
         namespace: "{{ namespace }}"
-        verify_ssl: no
+        verify_ssl: "no"
       register: dex_sa_secrets
       when: "'token' in item.name"
       with_items: "{{ dex_sa.resources[0].secrets }}"
@@ -106,7 +106,7 @@
         dex_sa_token: "{{ item.resources[0].data.token | b64decode }}"
       when: "'resources' in item"
       with_items: "{{ dex_sa_secrets.results }}"
-      no_log: True
+      no_log: "True"
 
     - name: Get the ArgoCD Server Route
       k8s_info:
@@ -114,7 +114,7 @@
         kind: Route
         name: argocd-server
         namespace: "{{ namespace }}"
-        verify_ssl: no
+        verify_ssl: "no"
       register: server_route
 
     - name: Set Dex Connecter fields
@@ -130,9 +130,8 @@
         kubeconfig: "{{ kubeconfig }}"
         state: present
         namespace: "{{ namespace }}"
-        verify_ssl: no
+        verify_ssl: "no"
         definition: "{{ lookup('template', 'objects/patches/'+item.path ) }}"
         merge_type:
           - merge
       with_filetree: objects/patches/
-

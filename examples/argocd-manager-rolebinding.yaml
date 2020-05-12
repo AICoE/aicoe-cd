@@ -6,6 +6,6 @@ metadata:
 roleRef:
   name: admin
 subjects:
-- kind: ServiceAccount
-  name: argocd-manager
-  namespace: <sa_namespace>
+  - kind: ServiceAccount
+    name: argocd-manager
+    namespace: <sa_namespace>

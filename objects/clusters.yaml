@@ -10,7 +10,7 @@ metadata:
 data:
   config: |
     {{ cluster.data.config | to_json | b64encode }}
-  name: {{ cluster.data.name | b64encode}}
+  name: {{ cluster.data.name | b64encode }}
   namespaces: {{ cluster.data.namespaces | join(',') | b64encode }}
   server: {{ cluster.data.server | b64encode }}
 type: Opaque
