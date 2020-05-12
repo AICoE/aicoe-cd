@@ -55,6 +55,18 @@
         - objects/namespace-install.yaml
         - objects/argocd_server_route.yaml
 
+    - name: Create cluster specs
+      k8s:
+        kubeconfig: "{{ kubeconfig }}"
+        state: present
+        namespace: "{{ namespace }}"
+        verify_ssl: no
+        definition: "{{ lookup('template', 'objects/clusters.yaml') }}"
+      with_items: "{{ clusters | default([]) }}"
+      loop_control:
+        loop_var: cluster
+      no_log: True
+
     - name: Deploy the ArgoCD projects
       k8s:
         kubeconfig: "{{ kubeconfig }}"
@@ -123,3 +135,4 @@
         merge_type:
           - merge
       with_filetree: objects/patches/
+

@@ -1,0 +1,11 @@
+apiVersion: authorization.openshift.io/v1
+kind: RoleBinding
+metadata:
+  name: argocd-manager-rolebinding
+  namespace: <application_namespace>
+roleRef:
+  name: admin
+subjects:
+- kind: ServiceAccount
+  name: argocd-manager
+  namespace: <sa_namespace>

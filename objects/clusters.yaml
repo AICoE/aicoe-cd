@@ -1,0 +1,16 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  name: {{ cluster.name }}
+  namespace: {{ namespace }}
+  labels:
+    argocd.argoproj.io/secret-type: cluster
+  annotations:
+    managed-by: argocd.argoproj.io
+data:
+  config: |
+    {{ cluster.data.config | to_json | b64encode }}
+  name: {{ cluster.data.name | b64encode}}
+  namespaces: {{ cluster.data.namespaces | join(',') | b64encode }}
+  server: {{ cluster.data.server | b64encode }}
+type: Opaque
