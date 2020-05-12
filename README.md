@@ -41,8 +41,9 @@ ansible-playbook --ask-vault-pass playbook.yaml \
 ```
 
 ### Ignore cluster objects
+
 If you want to just update deployment/configs or other namespace scoped objects
-without requiring cluster-admin, just add the additional `cluster_admin=False` var: 
+without requiring cluster-admin, just add the additional `deploy_cluster_objects=False` var:
 
 ```bash
 pipenv shell
@@ -107,10 +108,41 @@ the file in `vars/gpg-keys`.
 ### Logging into ArgoCD
 
 ```bash
-# Login to ArgoCD
 ARGOCD_ROUTE=$(oc get route argocd-server -o jsonpath='{.spec.host}')
+# Login to ArgoCD as admin user
 argocd --insecure --grpc-web login ${ARGOCD_ROUTE}:443 --username admin --password ${ARGOCD_SERVER_PASSWORD}
+# Login to ArgoCD via SSO
+argocd --insecure --grpc-web login ${ARGOCD_ROUTE}:443 --sso
 ```
+
+### Adding Clusters and namespaces via CLI
+
+```bash
+argocd cluster add <cluster_context> --namespace <application_namespace>
+```
+
+Note: You can find your cluster-contexts by going into your kubeconfig or running `kubectl config current-context`
+
+### Deploying Applications with ArgoCD
+
+1. Log into Argocd ui at ```echo https://$(oc get routes | grep argocd-server | awk 'NR==1{print $2}')```
+2. Click create application
+3. Fill the fields out like so:
+
+    Application name: <application_name>
+    Project: <your_team_project>
+    Sync Policy: Automatic (or manual)
+    Sync Option: Check Use A Schema...
+    Repository URL: <git_url>
+    Revision: <branch_name> or HEAD
+    Path: <path_to_overlay> or .
+    Cluster: Your cluster address
+    Namespace: <application_namespace>
+
+Leave the rest blank and click create at the top left.
+If everything works the creation slider will go away, refresh the page and the app should be there if isn't already. Click sync and your application should be deployed.
+
+NOTE: You may need to disable schema validation if your deployments are failing. This is due to the ArgoCD api validator having a very strict api spec.
 
 ### Change Admin Password
 
