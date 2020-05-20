@@ -38,7 +38,9 @@ Fill out `application_namespace`, `role`, and `sa_namespace`.
 > 
 > **`sa_namespace`**: On PSI OCP4 this will be `aicoe-argocd` and on Data-Hub clusters it will be `argocd-manager`. 
 > 
-> **`role`**: must be a role that can deploy resources you would like ArgoCD to manage, if you'd like ArgoCD to have same access as the project admin, then simply put `admin` (assuming you are project admin as well). 
+> **`role`**: must be a project `admin` role, or a role that, _at the minumum_ has 
+>read access to all resources listed in `resource.inclusions` in 
+>[prod-vars.yaml](https://github.com/AICoE/aicoe-cd/blob/master/vars/prod-vars.yaml).
 
 
 ### 2. Add namespace to ArgoCD Cluster spec 
@@ -123,10 +125,11 @@ clusters:
 Once done, submit a PR. After merge, run the playbook to bring the changes live. 
 
 
-## Cluster Exclusions 
+## Cluster Inclusions 
 
 It is likely that your team does not have `get` access to all namespace scoped resources.
 This can be an issue when deploying apps to a namespace in a cluster, because ArgoCD will
-attempt to discover all namespace scoped resourced and be denied. To avoid this, when
-adding a cluster, also consider adding such resources to the exclusions list in the 
+attempt to discover all namespace scoped resourced and be denied. To avoid this, we limit
+ArgoCD to discover the resources that are available to project admins, these are added 
+under the `resource.inclusions` ArgoCD configurations in
 [prod-vars.yaml](https://github.com/AICoE/aicoe-cd/blob/master/vars/prod-vars.yaml).
