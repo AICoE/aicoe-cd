@@ -7,7 +7,7 @@ repo_server_image: quay.io/aicoe/argocd:v1.5.2-1
 clusters:
   - name: cluster-datahub.psi.redhat.com
     data:
-      name: dh-prod-jupyterhub-argocd/datahub-psi-redhat-com:443/system:serviceaccount:argocd-manager:argocd-manager
+      name: datahub.psi.redhat.com
       namespaces:
         - dh-prod-jupyterhub-argocd
       server: https://datahub.psi.redhat.com:443
@@ -67,7 +67,7 @@ clusters:
           insecure: true
   - name: cluster-paas.stage.psi.redhat.com
     data:
-      name: argocd-manager/paas-stage-psi-redhat-com:443/system:serviceaccount:argocd-manager:argocd-manager
+      name: paas.stage.psi.redhat.com
       namespaces:
         - dh-stage-jupyterhub-argocd
       server: https://paas.stage.psi.redhat.com:443
@@ -125,7 +125,81 @@ clusters:
           6564
         tlsClientConfig:
           insecure: true
-
+  - name: cluster-apps.ocp.prod.psi.redhat.com
+    data:
+      name: apps.ocp.prod.psi.redhat.com
+      namespaces:
+        - dtuchyna-thoth-dev
+        - fmurdaca-thoth-dev
+        - fpokorny-thoth-dev
+        - goern-thoth-dev
+        - jupyterhub-shuels-thoth-integration
+        - kpostlet-thoth-dev
+        - thoth-amun-api-stage
+        - thoth-amun-inspection-stage
+        - thoth-backend-stage
+        - thoth-frontend-stage
+        - thoth-graph-stage
+        - thoth-infra-stage
+        - thoth-middletier-stage
+        - thoth-test-core
+      server: https://api.ocp.prod.psi.redhat.com:6443
+      config:
+        bearerToken: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          62343631366662373536386564656334303635306333383234646136323038383235373531363165
+          3136363064326561396263333138626230633166656238340a393665643534623562316261323664
+          32616638656332663166333836346464343362616637373436306631303366666132653837613561
+          6133646463393435390a626633393331373539633831623566636661613430616434363638653830
+          64663433633238303831346463666239373837313235333765393561393866383261366338656262
+          63313231646136366363306339663764373934326631373038633535626165393461333932373663
+          36633237373863343461383132643761633039336439653835383438613234323136303337623162
+          36393964313462393139656339306137643337393735316333343134613938653034653631343932
+          65313538613737613165643036656632316136373166663033656265333034626230383039333436
+          37616334373262633833356539656335306163623865653935626263643963303531393433366437
+          62363765333936656539323830666165626663636332646465636463303132643234386162653664
+          34373162653862626332643763383562356436333430623739383831303138353131316465373165
+          64316336623837353863653465663531323639383466646562376639653631316534356666363465
+          33636231343339646331643239346563633863656231313530623537356538326431613834356236
+          36656664356562336536313063363861396636663135326435313263303433393166653232366237
+          65613165396236313030313337393338363766393431373561313434316462646664623738346638
+          30393730623835663532653765356266386336303830323437306234383231303236373262346462
+          31383833326162373262663737613733343730323861663137643732373634306534623230613236
+          37633765313337663363633731626136313533386364366335323836303266326562636262366664
+          62366339383365376232636661373839313135663136383934653762393933616433626362646131
+          34386463626265383937633464373537643165636137333062663034333064613435383065373163
+          35393165623031326237663032386335616266383663653861613564396332383861393930333134
+          32373761333837356534313436663563396137353463633235353236303539366131383563353639
+          64373764643737653336613037626238323634343665393538653865616136343930653333333431
+          62666231663034656464643934643437393233623132353730316330363865656530383330356238
+          32343633643361306463376363633262326466356563383662373832313332633039336537336134
+          63383738336262633031656335353439343063386139666633633436363230343134313836663037
+          35383461356164323034343738323835633265346534646432376263303036363363323165323030
+          34663362386332353131646562326435646463343964616461353762366138633735383034333137
+          38323833623939633832313465383663313130303238643630623466353338356363383534383437
+          65636139326661646461343238626438366364616533653730383431326261393534656134396435
+          63386136346631383937666264326333303562353464346462353831316563343831623336356365
+          66663439633263306164376365326139396463333130653330643734666636343838666437336564
+          33333566313332363735613064633932633636663662643339633663343365363234363830623735
+          33323366626636643465643265386631356466623231373165363933636461346362643165393534
+          64666433303065316362613264323465376265336535623661653530633035303431306433613239
+          30323036646130373861633232616431656638353335663232376162333337303566396564326462
+          64306264373862663762616231356262326463386639333134356235626635636635383830343863
+          32346638646433333236343632386265646366353330663664313765363663666434623565303532
+          61363161396437323732313432383964653530636332636638383234353437353639646533333536
+          65633834363064616433316433336530346335316232323037393266306562333539636662626231
+          37656638316438326438346664373236663639653734356262353062356262333833303835383032
+          32613538306165306237656166623135363963653231646561366562636630303466343565666163
+          65656430326231353064626231386236356565336363353563303935306665663065666433366238
+          65636230663038323835616335306635333132633636303766666633376566343836623437346630
+          36353734356265623639646462393733633838373036623466353161613862353534363734393737
+          63386361306132663366303539636166366430633836656238653562343839343139623731656233
+          39333165616130393235383735373932356539366134633736356163646538303063396435613832
+          66373263626134383261633032653064623435383733656232643433616438666330346531393835
+          36323761326130646131303566656232343436366161396535333861613133633630356463636532
+          613431313731633132613335383865303566
+        tlsClientConfig:
+          insecure: true
 argo_cm: |
   data:
     url: {{ argocd_url }}
@@ -162,137 +236,314 @@ argo_cm: |
         - "TaskRun"
         clusters:
         - "*"
+    resource.inclusions: |
+      - apiGroups:
+        - '*'
+        kinds:
+        - '*'
+        clusters:
+        - https://api.thoth01.lab.upshift.rdu2.redhat.com:6443
       - apiGroups:
         - ''
         kinds:
-        - 'PodTemplate'
+        - Binding
+        - ConfigMap
+        - Endpoints
+        - Event
+        - LimitRange
+        - PersistentVolumeClaim
+        - Pod
+        - ReplicationController
+        - ResourceQuota
+        - Secret
+        - ServiceAccount
+        - Service
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
       - apiGroups:
-        - 'apps'
+        - app.kiegroup.org
         kinds:
-        - 'ControllerRevision'
+        - KieApp
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
       - apiGroups:
-        - 'argoproj.io'
+        - apps
         kinds:
-        - 'EventSource'
-        - 'Gateway'
-        - 'Sensor'
-        - 'Workflow'
-        - 'WorkflowTemplate'
+        - ControllerRevision
+        - DaemonSet
+        - Deployment
+        - ReplicaSet
+        - StatefulSet
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
       - apiGroups:
-        - 'authorization.k8s.io'
+        - apps.openshift.io
         kinds:
-        - 'LocalSubjectAccessReview'
+        - DeploymentConfig
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
       - apiGroups:
-        - 'authorization.openshift.io'
+        - argoproj.io
         kinds:
-        - 'LocalResourceAccessReview'
-        - 'LocalSubjectAccessReview'
-        - 'SelfSubjectRulesReview'
-        - 'SubjectRulesReview'
+        - CronWorkflow
+        - Workflow
+        - WorkflowTemplate
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
       - apiGroups:
-        - 'automationbroker.io'
+        - authorization.openshift.io
         kinds:
-        - 'BundleBinding'
-        - 'BundleInstance'
-        - 'Bundle'
+        - RoleBindingRestriction
+        - RoleBinding
+        - Role
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
       - apiGroups:
-        - 'events.k8s.io'
+        - autoscaling
         kinds:
-        - 'Event'
+        - HorizontalPodAutoscaler
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
       - apiGroups:
-        - 'federatorai.containers.ai'
+        - batch
         kinds:
-        - 'AlamedaService'
+        - CronJob
+        - Job
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
       - apiGroups:
-        - 'image.openshift.io'
+        - build.openshift.io
         kinds:
-        - 'ImageStreamImport'
-        - 'ImageStreamMapping'
+        - BuildConfig
+        - Build
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
       - apiGroups:
-        - 'kafka.strimzi.io'
+        - charts.helm.k8s.io
         kinds:
-        - 'KafkaConnect'
-        - 'KafkaConnectS2I'
-        - 'KafkaMirrorMaker'
-        - 'Kafka'
-        - 'KafkaTopic'
-        - 'KafkaUser'
+        - InfiniboxCsiDriver
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
       - apiGroups:
-        - 'machinelearning.seldon.io'
+        - crunchydata.com
         kinds:
-        - 'SeldonDeployment'
+        - Pgbackup
+        - Pgcluster
+        - Pgpolicy
+        - Pgreplica
+        - Pgtask
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
       - apiGroups:
-        - 'monitoring.coreos.com'
+        - extensions
         kinds:
-        - 'Alertmanager'
-        - 'Prometheus'
-        - 'PrometheusRule'
-        - 'ServiceMonitor'
+        - DaemonSet
+        - Deployment
+        - Ingress
+        - NetworkPolicy
+        - ReplicaSet
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
       - apiGroups:
-        - 'network.openshift.io'
+        - image.openshift.io
         kinds:
-        - 'EgressNetworkPolicy'
+        - ImageStreamImage
+        - ImageStreamMapping
+        - ImageStream
+        - ImageStreamTag
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
       - apiGroups:
-        - 'noobaa.io'
+        - kafka.strimzi.io
         kinds:
-        - 'BackingStore'
-        - 'BucketClass'
-        - 'NooBaa'
+        - KafkaBridge
+        - KafkaConnector
+        - KafkaConnect
+        - KafkaConnectS2I
+        - KafkaMirrorMaker2
+        - KafkaMirrorMaker
+        - Kafka
+        - KafkaTopic
+        - KafkaUser
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
       - apiGroups:
-        - 'objectbucket.io'
+        - logging.openshift.io
         kinds:
-        - 'ObjectBucketClaim'
+        - ClusterLogging
+        - Collector
+        - Elasticsearch
+        - LogForwarding
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
       - apiGroups:
-        - 'opendatahub.io'
+        - metrics.k8s.io
         kinds:
-        - 'OpenDataHub'
+        - PodMetrics
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
       - apiGroups:
-        - 'radanalytics.io'
+        - monitoring.coreos.com
         kinds:
-        - 'OshinkoApplication'
-        - 'OshinkoJob'
+        - Alertmanager
+        - PodMonitor
+        - Prometheus
+        - PrometheusRule
+        - ServiceMonitor
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
       - apiGroups:
-        - 'security.openshift.io'
+        - networking.k8s.io
         kinds:
-        - 'PodSecurityPolicyReview'
-        - 'PodSecurityPolicySelfSubjectReview'
-        - 'PodSecurityPolicySubjectReview'
+        - Ingress
+        - NetworkPolicy
         clusters:
-        - 'https://datahub.psi.redhat.com:443'
+        - https://api.ocp.prod.psi.redhat.com:6443
+      - apiGroups:
+        - operators.coreos.com
+        kinds:
+        - CatalogSource
+        - ClusterServiceVersion
+        - InstallPlan
+        - OperatorGroup
+        - Subscription
+        clusters:
+        - https://api.ocp.prod.psi.redhat.com:6443
+      - apiGroups:
+        - org.eclipse.che
+        kinds:
+        - CheCluster
+        clusters:
+        - https://api.ocp.prod.psi.redhat.com:6443
+      - apiGroups:
+        - packages.operators.coreos.com
+        kinds:
+        - PackageManifest
+        clusters:
+        - https://api.ocp.prod.psi.redhat.com:6443
+      - apiGroups:
+        - policy
+        kinds:
+        - PodDisruptionBudget
+        clusters:
+        - https://api.ocp.prod.psi.redhat.com:6443
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
+      - apiGroups:
+        - quota.openshift.io
+        kinds:
+        - AppliedClusterResourceQuota
+        clusters:
+        - https://api.ocp.prod.psi.redhat.com:6443
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
+      - apiGroups:
+        - rbac.authorization.k8s.io
+        kinds:
+        - RoleBinding
+        - Role
+        clusters:
+        - https://api.ocp.prod.psi.redhat.com:6443
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
+      - apiGroups:
+        - route.openshift.io
+        kinds:
+        - Route
+        clusters:
+        - https://api.ocp.prod.psi.redhat.com:6443
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
+      - apiGroups:
+        - template.openshift.io
+        kinds:
+        - Template
+        - TemplateInstance
+        - Template
+        clusters:
+        - https://api.ocp.prod.psi.redhat.com:6443
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
+      - apiGroups:
+        - apps
+        kinds:
+        - DaemonSet
+        - Deployment
+        - ReplicaSet
+        - StatefulSet
+        clusters:
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
+      - apiGroups:
+        - autoscaling.containers.ai
+        kinds:
+        - AlamedaRecommendation
+        - AlamedaScaler
+        clusters:
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
+      - apiGroups:
+        - machinelearning.seldon.io
+        kinds:
+        - SeldonDeployment
+        clusters:
+        - https://datahub.psi.redhat.com:443
+      - apiGroups:
+        - networking.k8s.io
+        kinds:
+        - NetworkPolicy
+        clusters:
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
+      - apiGroups:
+        - opendatahub.io
+        kinds:
+        - OpenDataHub
+        clusters:
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
+      - apiGroups:
+        - servicecatalog.k8s.io
+        kinds:
+        - ServiceBinding
+        - ServiceBroker
+        - ServiceClass
+        - ServiceInstance
+        - ServicePlan
+        clusters:
+        - https://datahub.psi.redhat.com:443
+        - https://paas.stage.psi.redhat.com:443
+      - apiGroups:
+        - airflow.apache.org
+        kinds:
+        - AirflowBase
+        - AirflowCluster
+        clusters:
+        - https://paas.stage.psi.redhat.com:443
+      - apiGroups:
+        - argoproj.io
+        kinds:
+        - EventSource
+        - Gateway
+        - Sensor
+        clusters:
+        - https://paas.stage.psi.redhat.com:443
 
 argo_rbac_cm: |
   data:
