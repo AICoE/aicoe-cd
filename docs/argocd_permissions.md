@@ -1,11 +1,13 @@
 ## ArgoCD Permissions 
-Currently there are 2 OpenShift groups (same as ldap) with access: 
+Currently there are 3 OpenShift groups (same as ldap) with access: 
 - `data-hub-openshift-admins` 
 - `aicoe-thoth-devops`
+- `aicoe-aiops-devops`
 
-There are 2 ArgoCD roles with defined policies: 
+There are 3 ArgoCD roles with defined policies: 
 - `thoth-admin `
 - `data-hub-admin`
+- `aiops-admin`
 
 OpenShift groups have the following ArgoCD role associations:
 
@@ -13,6 +15,7 @@ OpenShift groups have the following ArgoCD role associations:
 |:--------------------------- |:---------------- |
 | `aicoe-thoth-devops`        | `thoth-admin`    |
 | `data-hub-openshift-admins` | `data-hub-admin` |
+| `aicoe-aiops-devops`        | `aiops-admin`    |
 
 ArgoCD roles have policies that define their access to ArgoCD resources, they are defined in [prod-vars.yaml](https://github.com/AICoE/argocd-customization/blob/master/vars/prod-vars.yaml).
 

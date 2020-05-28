@@ -218,6 +218,7 @@ argo_cm: |
             groups:
               - data-hub-openshift-admins
               - aicoe-thoth-devops
+              - aicoe-aiops-devops
     kustomize.buildOptions: "--enable_alpha_plugins"
     repositories: |
       - type: git
@@ -583,3 +584,13 @@ argo_rbac_cm: |
       p, role:data-hub-admin, applications, action/*, data-hub/*, allow
       g, data-hub-openshift-admins, role:argocd-admin
       g, data-hub-openshift-admins, role:data-hub-admin
+
+      p, role:aiops-admin, applications, get, aiops/*, allow
+      p, role:aiops-admin, applications, create, aiops/*, allow
+      p, role:aiops-admin, applications, update, aiops/*, allow
+      p, role:aiops-admin, applications, delete, aiops/*, allow
+      p, role:aiops-admin, applications, sync, aiops/*, allow
+      p, role:aiops-admin, applications, override, aiops/*, allow
+      p, role:aiops-admin, applications, action/*, aiops/*, allow
+      g, aicoe-aiops-devops, role:argocd-admin
+      g, aicoe-aiops-devops, role:aiops-admin
