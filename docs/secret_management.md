@@ -1,10 +1,11 @@
-## Secret Management
-Secret management is handled using the KSOPs plugin. 
+# Secret Management
+
+Secret management is handled using the KSOPs plugin.
 
 Use [sops](https://github.com/mozilla/sops) to encrypt your secrets in vcs. Use the AICOE-SRE [public sops key](https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xefdb9afbd18936d9ab6b2eecbd2c73ff891fbc7e) to encrypt
-your secrets so that ArgoCD may use KSOPs to decrypt them. 
+your secrets so that ArgoCD may use KSOPs to decrypt them.
 
-### Updating Private key
+## Updating Private key
 
 Export the key
 
