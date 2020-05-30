@@ -9,5 +9,6 @@ Here you will find a compilation of documentation that help achieve efficiency, 
   - [Adding a New Cluster](cluster_ns_management.md#adding-a-new-cluster)
   - [Cluster exclusions](cluster_ns_management.md#cluster-exclusions)
 - [Application management](application_management.md)
+- [Important ArgoCD Metrics](argocd_metrics.md)
 - [Secret management](secret_management.md)
 - [ArgoCD Permissions](argocd_permissions.md)

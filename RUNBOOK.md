@@ -5,9 +5,14 @@
 Production Namespace: aicoe-argocd
 Production Cluster: This information can be found in the internal Runbooks repository.
 
+## Important Metrics
+
+We have a number of important metrics we are tracking on our operations dashboard.
+Information on these metrics can be found at [Important ArgoCD Metrics](docs/argocd_metrics.md).
+
 ## Common Debugging Steps
 
-### Aplication is stuck will not sync and/or is stuck on refresh
+### Application is stuck will not sync and/or is stuck on refresh
 
 Check work queue metric, it is possible that thread count is bottlenecked,
 restart the application controller pod.
@@ -22,9 +27,9 @@ the `resource.inclusions` list in [prod-vars.yaml](https://github.com/AICoE/aico
 
 An example error:
 
-```bash
-"system:serviceaccount:argocd-manager:argocd-manager" cannot list objectbucketclaims.objectbucket.io in the namespace "example-ns": no RBAC policy matched
-```
+    ```bash
+    "system:serviceaccount:argocd-manager:argocd-manager" cannot list objectbucketclaims.objectbucket.io in the namespace "example-ns": no RBAC policy matched
+    ```
 
 This means that the service account being used by ArgoCD (e.g. `argocd-manager`)
 does not have the appropriate permissions to list the resource in the designated
