@@ -133,7 +133,6 @@ clusters:
         - fmurdaca-thoth-dev
         - fpokorny-thoth-dev
         - goern-thoth-dev
-        - jupyterhub-shuels-thoth-integration
         - kpostlet-thoth-dev
         - thoth-amun-api-stage
         - thoth-amun-inspection-stage
