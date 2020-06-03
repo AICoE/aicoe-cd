@@ -1,11 +1,14 @@
-## ArgoCD Permissions 
-Currently there are 3 OpenShift groups (same as ldap) with access: 
-- `data-hub-openshift-admins` 
+# ArgoCD Permissions
+
+Currently there are 3 OpenShift groups (same as ldap) with access:
+
+- `data-hub-openshift-admins`
 - `aicoe-thoth-devops`
 - `aicoe-aiops-devops`
 
-There are 3 ArgoCD roles with defined policies: 
-- `thoth-admin `
+There are 3 ArgoCD roles with defined policies:
+
+- `thoth-admin`
 - `data-hub-admin`
 - `aiops-admin`
 
@@ -29,4 +32,4 @@ In summary this is what you can and cannot do as a `<project>-admin` (where `pro
 - `<project>-admin` can do pretty much anything including delete argocd application in their ArgoCD `<project>`
 - `<project>-admin` cannot delete non application resources
 
-All this applies to OpenShift Authentication, ArgoCD admin account retains unrestricted access. 
+All this applies to OpenShift Authentication, ArgoCD admin account retains unrestricted access.

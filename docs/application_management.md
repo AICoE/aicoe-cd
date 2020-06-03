@@ -1,7 +1,7 @@
-## Application Management
+# Application Management
 
-Currently application creation/managment happens via the ArgoCD UI. In the future 
-we will create and manage applications declaratively. 
+Currently application creation/managment happens via the ArgoCD UI. In the future
+we will create and manage applications declaratively.
 
 ## Deploying Applications with ArgoCD
 
@@ -9,7 +9,7 @@ we will create and manage applications declaratively.
 2. Click create application
 3. Fill the fields out like so:
 
-```
+```text
 Application name: <application_name>
 Project: <your_team_project>
 Sync Policy: Automatic (or manual)

@@ -64,12 +64,11 @@ This repository is containing additions to the ArgoCD container image:
 
 ### KSOPS
 
-To add KSOPS support we just follow [the README](https://github.com/viaduct-ai/kustomize-sops#argo-cd-integration-)
+To add KSOPS support we just followed [the README](https://github.com/viaduct-ai/kustomize-sops#argo-cd-integration-)
 
 ### Releases
 
-The container image is build manually and pushed to [Quay](https://quay.io/repository/aicoe/argocd)
-
+The container image is built manually and pushed to [Quay](https://quay.io/repository/aicoe/argocd)
 
 ### Logging into ArgoCD
 
@@ -82,5 +81,3 @@ argocd --insecure --grpc-web login ${ARGOCD_ROUTE}:443 --sso
 ```
 
 Note: You can find your cluster-contexts by going into your kubeconfig or running `kubectl config current-context`
-
-
