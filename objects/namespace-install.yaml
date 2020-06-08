@@ -2253,6 +2253,9 @@ spec:
           initialDelaySeconds: 5
           periodSeconds: 10
         name: argocd-application-controller
+        resources:
+          limits:
+            memory: 2Gi
         ports:
         - containerPort: 8082
         readinessProbe:
