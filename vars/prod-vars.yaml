@@ -70,6 +70,7 @@ clusters:
       name: paas.stage.psi.redhat.com
       namespaces:
         - dh-stage-jupyterhub-argocd
+        - dh-stage-jupyterhub
       server: https://paas.stage.psi.redhat.com:443
       config:
         bearerToken: !vault |
