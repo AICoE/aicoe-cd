@@ -129,6 +129,7 @@ clusters:
     data:
       name: apps.ocp.prod.psi.redhat.com
       namespaces:
+        - dh-psi-monitoring
         - dtuchyna-thoth-dev
         - fmurdaca-thoth-dev
         - fpokorny-thoth-dev
