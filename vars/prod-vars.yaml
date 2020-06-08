@@ -9,7 +9,7 @@ clusters:
     data:
       name: datahub.psi.redhat.com
       namespaces:
-        - dh-prod-jupyterhub-argocd
+        - dh-prod-jupyterhub
       server: https://datahub.psi.redhat.com:443
       config:
         bearerToken: !vault |
