@@ -229,6 +229,8 @@ argo_cm: |
         url: https://github.com/thoth-station/thoth-application.git
       - type: git
         url: https://github.com/thoth-station/thoth-ci.git
+      - type: git
+        url: https://github.com/AICoE/aicoe-sre.git
     resource.exclusions: |
       - apiGroups:
         - "tekton.dev"
