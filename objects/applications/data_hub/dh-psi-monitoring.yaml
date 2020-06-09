@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dh-psi-monitoring
+spec:
+  destination:
+    namespace: dh-psi-monitoring
+    server: https://api.ocp.prod.psi.redhat.com:6443
+  project: data-hub
+  source:
+    path: monitoring/psi-prod-cluster/overlays/prod
+    repoURL: https://github.com/AICoE/aicoe-sre.git
+    targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+    - Validate=false

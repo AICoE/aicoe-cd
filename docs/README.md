@@ -1,6 +1,9 @@
 # AICOE - SRE Docs
 
-Here you will find a compilation of documentation that help achieve efficiency, transparency, and uniformity of performance.
+Here you will find a series of docs that outline various procedures and how-tos
+when interacting with ArgoCD.
+
+Access the ArgoCD UI [here](https://argocd-server-aicoe-argocd.apps.ocp.prod.psi.redhat.com/applications).
 
 ## Index
 
