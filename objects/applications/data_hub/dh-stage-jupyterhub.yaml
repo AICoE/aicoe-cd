@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dh-stage-jupyterhub
+spec:
+  destination:
+    namespace: dh-stage-jupyterhub
+    server: https://paas.stage.psi.redhat.com:443
+  project: data-hub
+  source:
+    path: applications/jupyterhub/overlays/stage
+    repoURL: https://github.com/AICoE/aicoe-sre.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - Validate=false

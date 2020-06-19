@@ -135,3 +135,59 @@
         merge_type:
           - merge
       with_filetree: objects/patches/
+
+    - name: Get Application Controller Service Account
+      k8s_info:
+        kubeconfig: "{{ kubeconfig }}"
+        kind: ServiceAccount
+        name: argocd-application-controller
+        namespace: "{{ namespace }}"
+        verify_ssl: "no"
+      register: appctrl_sa
+
+    - name: Get Application Controller Service Account Secrets
+      k8s_info:
+        kubeconfig: "{{ kubeconfig }}"
+        kind: Secret
+        name: "{{ item.name }}"
+        namespace: "{{ namespace }}"
+        verify_ssl: "no"
+      register: appctrl_sa_secrets
+      when: "'token' in item.name"
+      with_items: "{{ appctrl_sa.resources[0].secrets }}"
+
+    - set_fact:
+        appctrl_sa_token: "{{ item.resources[0].data.token | b64decode }}"
+      when: "'resources' in item"
+      with_items: "{{ appctrl_sa_secrets.results }}"
+      no_log: "True"
+
+    - name: Deploy ArgoCD Projects
+      k8s:
+        kubeconfig: "{{ kubeconfig }}"
+        state: present
+        namespace: "{{ namespace }}"
+        verify_ssl: "no"
+        api_key: "{{ appctrl_sa_token }}"
+        definition: "{{ lookup('template', 'objects/projects/'+item.path ) }}"
+      with_filetree: objects/projects/
+      when: target_env == 'prod'
+
+    - name: Get all applications
+      find:
+        paths: objects/applications/
+        recurse: yes
+      register: argocd_apps
+
+    - name: Deploy ArgoCD Applications
+      k8s:
+        kubeconfig: "{{ kubeconfig }}"
+        state: present
+        namespace: "{{ namespace }}"
+        verify_ssl: "no"
+        definition: "{{ lookup('template', file.path ) }}"
+        api_key: "{{ appctrl_sa_token }}"
+      with_items: "{{ argocd_apps.files }}"
+      loop_control:
+        loop_var: file
+      when: target_env == 'prod'
