@@ -1,16 +1,16 @@
-#apiVersion: argoproj.io/v1alpha1
-#kind: Application
-#metadata:
-#  name: dh-prod-jupyterhub
-#spec:
-#  destination:
-#    namespace: dh-prod-jupyterhub
-#    server: https://datahub.psi.redhat.com:443
-#  project: data-hub
-#  source:
-#    path: applications/jupyterhub/overlays/prod
-#    repoURL: https://github.com/AICoE/aicoe-sre.git
-#    targetRevision: HEAD
-#  syncPolicy:
-#    syncOptions:
-#    - Validate=false
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dh-prod-jupyterhub
+spec:
+  destination:
+    namespace: dh-prod-jupyterhub
+    server: https://datahub.psi.redhat.com:443
+  project: data-hub
+  source:
+    path: applications/jupyterhub/overlays/prod
+    repoURL: https://github.com/AICoE/aicoe-sre.git
+    targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+    - Validate=false
