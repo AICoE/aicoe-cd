@@ -108,22 +108,29 @@
       with_items: "{{ dex_sa_secrets.results }}"
       no_log: "True"
 
-    - name: Get the ArgoCD Server Route
-      k8s_info:
-        kubeconfig: "{{ kubeconfig }}"
-        kind: Route
-        name: argocd-server
-        namespace: "{{ namespace }}"
-        verify_ssl: "no"
+# TODO: Figure out why k8s_info cannot retrieve this route
+#    - name: Get the ArgoCD Server Route
+#      k8s_info:
+#        kubeconfig: "{{ kubeconfig }}"
+#        kind: Route
+#        name: argocd-server
+#        namespace: "{{ namespace }}"
+#        verify_ssl: "no"
+#      register: server_route
+
+    - name: Get the ArgoCD Server Route via shell
+      shell: |
+        oc get route argocd-server -o jsonpath='{.spec.host}' -n {{ namespace }}
       register: server_route
 
     - name: Set Dex Connecter fields
       set_fact:
-        argocd_url: "https://{{ server_route.resources[0].spec.host }}"
+        argocd_url: "https://{{ server_route.stdout }}"
         issuer: "{{ api_server.stdout }}"
         clientID: "system:serviceaccount:{{ namespace }}:argocd-dex-server"
         clientSecret: "{{ dex_sa_token }}"
-        redirectURI: "https://{{ server_route.resources[0].spec.host }}/api/dex/callback"
+        redirectURI: "https://{{ server_route.stdout }}/api/dex/callback"
+
 
     - name: Apply patches
       k8s:
