@@ -4,7 +4,7 @@ When migrating an application's deployment to be managed by ArgoCD use the follo
 
 - [ ] Ensure your application manifests can be built using Kustomize.
 - [ ] If using secrets, make sure to include the .sops.yaml file in your repository.
-- [ ] Make sure to create the role granting access to namespace. See [here](cluster_ns_management.md#deploying-to-a-namespace) for more info.
+- [ ] Make sure to create the role granting access to namespace. See [here](cluster_ns_management.md#deploying-to-a-namespace) for more info. This role is tracked in your application manifests.
 
 
 The following items require a PR to the `aicoe-cd` repository, and require an `aicoe-sre` team member to merge/deploy changes:
