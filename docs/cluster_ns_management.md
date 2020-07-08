@@ -3,7 +3,7 @@
 We add [clusters declaratively](https://argoproj.github.io/argo-cd/operator-manual/declarative-setup/#clusters) in ArgoCD.
 
 The ansible playbook will auto generate the cluster spec that is defined within
-the [prod-vars.yaml](https://github.com/AICoE/aicoe-cd/blob/master/vars/prod-vars.yaml).
+the [prod-vars.yaml](../vars/prod-vars.yaml).
 
 ## Deploying to a namespace
 
@@ -40,11 +40,11 @@ Fill out `application_namespace`, `role`, and `sa_namespace`.
 >
 > **`role`**: must be a project `admin` role, or a role that, _at the minumum_ has
 >read access to all resources listed in `resource.inclusions` in
->[prod-vars.yaml](https://github.com/AICoE/aicoe-cd/blob/master/vars/prod-vars.yaml).
+>[prod-vars.yaml](../vars/prod-vars.yaml).
 
 ### 2. Add namespace to ArgoCD Cluster spec
 
-Namespaces are added to ArgoCD by altering the corresponding cluster spec. Cluster specs are defined within the [prod-vars.yaml](https://github.com/AICoE/aicoe-cd/blob/master/vars/prod-vars.yaml) under the `clusters` field. To add a namespace, find `your_cluster` and append the `namespaces` list with your namespace, see below for an example.
+Namespaces are added to ArgoCD by altering the corresponding cluster spec. Cluster specs are defined within the [prod-vars.yaml](../vars/prod-vars.yaml) under the `clusters` field. To add a namespace, find `your_cluster` and append the `namespaces` list with your namespace, see below for an example.
 
 ```yaml
 
@@ -100,7 +100,7 @@ Get the server hostname:
 SERVER=`oc whoami --show-server`
 ```
 
-Next you will need to append to the `clusters` field in [prod-vars.yaml](https://github.com/AICoE/aicoe-cd/blob/master/vars/prod-vars.yaml).
+Next you will need to append to the `clusters` field in [prod-vars.yaml](../vars/prod-vars.yaml).
 
 See below for an example with comments on how to fill out the spec.
 
@@ -132,4 +132,11 @@ This can be an issue when deploying apps to a namespace in a cluster, because Ar
 attempt to discover all namespace scoped resourced and be denied. To avoid this, we limit
 ArgoCD to discover the resources that are available to project admins, these are added
 under the `resource.inclusions` ArgoCD configurations in
-[prod-vars.yaml](https://github.com/AICoE/aicoe-cd/blob/master/vars/prod-vars.yaml).
+[prod-vars.yaml](../vars/prod-vars.yaml).
+
+If your application contains resources that a project `admin` does not have permissions
+to list/edit then you can request that a cluster admin deploy aggregated roles to add
+such permissions. See here for an [example](https://github.com/argoproj/argo-events/blob/master/manifests/cluster-install/rbac/argo-events-aggregate-to-admin.yaml).
+
+Once having done so, you can make a PR with these resources added onto the `resource.inclusions`
+list in [prod-vars.yaml](../vars/prod-vars.yaml).

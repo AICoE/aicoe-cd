@@ -11,6 +11,7 @@ Access the ArgoCD UI [here](https://argocd-server-aicoe-argocd.apps.ocp.prod.psi
   - [Deploying to a namespace](cluster_ns_management.md#deploying-to-a-namespace)
   - [Adding a New Cluster](cluster_ns_management.md#adding-a-new-cluster)
   - [Cluster exclusions](cluster_ns_management.md#cluster-exclusions)
+- [Application migration](application_migration.md)
 - [Application management](application_management.md)
 - [Important ArgoCD Metrics](argocd_metrics.md)
 - [Secret management](secret_management.md)
