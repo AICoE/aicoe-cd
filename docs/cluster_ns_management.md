@@ -135,8 +135,8 @@ under the `resource.inclusions` ArgoCD configurations in
 [prod-vars.yaml](../vars/prod-vars.yaml).
 
 If your application contains resources that a project `admin` does not have permissions
-to list/edit then you can request that a cluster admin deploy aggregated roles to add 
-such permissions. See here for an [example](https://github.com/argoproj/argo-events/blob/master/manifests/cluster-install/rbac/argo-events-aggregate-to-admin.yaml). 
+to list/edit then you can request that a cluster admin deploy aggregated roles to add
+such permissions. See here for an [example](https://github.com/argoproj/argo-events/blob/master/manifests/cluster-install/rbac/argo-events-aggregate-to-admin.yaml).
 
-Once having done so, you can make a PR with these resources added onto the `resource.inclusions` 
+Once having done so, you can make a PR with these resources added onto the `resource.inclusions`
 list in [prod-vars.yaml](../vars/prod-vars.yaml).
