@@ -2360,6 +2360,19 @@ spec:
         app.kubernetes.io/name: argocd-repo-server
     spec:
       automountServiceAccountToken: false
+      volumes:
+        - name: custom-tools
+          emptyDir: {}
+      initContainers:
+        - name: download-tools
+          image: alpine:latest
+          command: [sh, -c]
+          args:
+            - wget -qO- https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv3.6.1/kustomize_v3.6.1_linux_amd64.tar.gz | tar -xvzf - &&
+              mv kustomize /custom-tools/kustomize_3_6_1
+          volumeMounts:
+            - mountPath: /custom-tools
+              name: custom-tools
       containers:
       - command:
         - uid_entrypoint.sh
@@ -2393,6 +2406,8 @@ spec:
           name: tls-certs
         - name: key
           mountPath: /key
+        - name: custom-tools
+          mountPath: /custom-tools
         env:
           - name: GNUPGHOME
             value: /home/argocd/.gnupg

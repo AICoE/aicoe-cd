@@ -11,6 +11,8 @@ spec:
     path: applications/argo/overlays/dh-stage-argo
     repoURL: https://github.com/AICoE/aicoe-sre.git
     targetRevision: HEAD
+    kustomize:
+      version: v3.6.1
   syncPolicy:
     automated:
       prune: true
@@ -31,6 +33,8 @@ spec:
     path: applications/argo-events/overlays/dh-stage-argo
     repoURL: https://github.com/AICoE/aicoe-sre.git
     targetRevision: HEAD
+    kustomize:
+      version: v3.6.1
   syncPolicy:
     automated:
       prune: true
