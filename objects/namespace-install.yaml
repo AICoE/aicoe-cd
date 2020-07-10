@@ -2255,7 +2255,7 @@ spec:
         name: argocd-application-controller
         resources:
           limits:
-            memory: 2Gi
+            memory: 4Gi
         ports:
         - containerPort: 8082
         readinessProbe:
