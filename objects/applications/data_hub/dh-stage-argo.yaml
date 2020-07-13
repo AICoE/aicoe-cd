@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argo
+  name: argo.dh-stage-argo
 spec:
   destination:
     namespace: dh-stage-argo
@@ -21,7 +21,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argo-events
+  name: argo-events.dh-stage-argo
 spec:
   destination:
     namespace: dh-stage-argo
