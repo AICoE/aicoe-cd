@@ -70,8 +70,26 @@ Let's go over what some of the fields in the `example_app.yaml` refer to:
 
 - `spec.source.repoURL`: the repository holding the `Application`'s desired state, ensure this repo exists within `argo_cm` in [prod-vars.yaml](https://github.com/AICoE/aicoe-cd/blob/master/vars/prod-vars.yaml) under data.repositories.
 
-NOTE: You may need to disable schema validation if your deployments are failing. This is due to the ArgoCD api validator having a very strict api spec.
+  In case you are adding a private repo:
 
+  1. Please ensure [@sesheta](https://github.com/sesheta) bot has access to your repo (directly or indirectly via [@AICoE/sourceops](https://github.com/orgs/AICoE/teams/sourceops)/[@aicoe-aiops/sourceops](https://github.com/orgs/aicoe-aiops/teams/sourceops) teams)
+  2. Reference repository access credentials via SourceOps secret:
+
+      ```yaml
+      repositories: |
+      ...
+      - type: git
+        url: https://github.com/<PATH>.git
+        usernameSecret:
+          key: username
+          secret: srcops
+        passwordSecret:
+          key: token
+          secret: srcops
+      ...
+      ```
+
+NOTE: You may need to disable schema validation if your deployments are failing. This is due to the ArgoCD api validator having a very strict api spec.
 
 ### Step 2. Make a Pull request
 
