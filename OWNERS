@@ -1,0 +1,11 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+approvers:
+  - anishasthana
+  - HumairAK
+  - tumido
+  - sesheta
+reviewers:
+  - durandom
+  - harshad16
+  - hemajv
