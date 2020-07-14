@@ -54,6 +54,7 @@
         - objects/secret.yaml
         - objects/namespace-install.yaml
         - objects/argocd_server_route.yaml
+        - objects/srcops-secret.yaml
 
     - name: Create cluster specs
       k8s:
