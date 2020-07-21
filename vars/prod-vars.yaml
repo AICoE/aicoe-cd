@@ -595,6 +595,14 @@ argo_rbac_cm: |
       p, role:thoth-admin, applications, sync, thoth/*, allow
       p, role:thoth-admin, applications, override, thoth/*, allow
       p, role:thoth-admin, applications, action/*, thoth/*, allow
+
+      p, role:thoth-admin, applications, get, thoth-dev/*, allow
+      p, role:thoth-admin, applications, create, thoth-dev/*, allow
+      p, role:thoth-admin, applications, update, thoth-dev/*, allow
+      p, role:thoth-admin, applications, delete, thoth-dev/*, allow
+      p, role:thoth-admin, applications, sync, thoth-dev/*, allow
+      p, role:thoth-admin, applications, override, thoth-dev/*, allow
+      p, role:thoth-admin, applications, action/*, thoth-dev/*, allow
       g, aicoe-thoth-devops, role:argocd-admin
       g, aicoe-thoth-devops, role:thoth-admin
 
