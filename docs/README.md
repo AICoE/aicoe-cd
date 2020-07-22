@@ -16,3 +16,4 @@ Access the ArgoCD UI [here](https://argocd-server-aicoe-argocd.apps.ocp.prod.psi
 - [Important ArgoCD Metrics](argocd_metrics.md)
 - [Secret management](secret_management.md)
 - [ArgoCD Permissions](argocd_permissions.md)
+- [ArgoCD Version](version.md)

@@ -54,7 +54,17 @@
         - objects/secret.yaml
         - objects/namespace-install.yaml
         - objects/argocd_server_route.yaml
+
+    - name: Deploy the ArgoCD Prod only objects to Openshift
+      k8s:
+        kubeconfig: "{{ kubeconfig }}"
+        state: present
+        namespace: "{{ namespace }}"
+        verify_ssl: "no"
+        definition: "{{ lookup('template', item) }}"
+      with_items:
         - objects/srcops-secret.yaml
+      when: (target_env == 'prod')
 
     - name: Create cluster specs
       k8s:
@@ -67,17 +77,6 @@
       loop_control:
         loop_var: cluster
       no_log: "True"
-
-    - name: Deploy the ArgoCD projects
-      k8s:
-        kubeconfig: "{{ kubeconfig }}"
-        state: present
-        namespace: "{{ namespace }}"
-        verify_ssl: "no"
-        definition: "{{ lookup('template', item) }}"
-      with_items:
-        - objects/projects/projects.yaml
-      when: (target_env == 'prod') and (cluster_admin | bool)
 
     - name: Get OpenShift API server
       shell: oc whoami --show-server
