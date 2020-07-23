@@ -590,17 +590,23 @@ argo_rbac_cm: |
       p, role:argocd-admin, accounts, update, *, allow
 
       p, role:thoth-admin, applications, get, thoth/*, allow
-      p, role:thoth-admin, applications, create, thoth/*, allow
       p, role:thoth-admin, applications, update, thoth/*, allow
       p, role:thoth-admin, applications, delete, thoth/*, allow
       p, role:thoth-admin, applications, sync, thoth/*, allow
       p, role:thoth-admin, applications, override, thoth/*, allow
       p, role:thoth-admin, applications, action/*, thoth/*, allow
+
+      p, role:thoth-admin, applications, get, thoth-dev/*, allow
+      p, role:thoth-admin, applications, create, thoth-dev/*, allow
+      p, role:thoth-admin, applications, update, thoth-dev/*, allow
+      p, role:thoth-admin, applications, delete, thoth-dev/*, allow
+      p, role:thoth-admin, applications, sync, thoth-dev/*, allow
+      p, role:thoth-admin, applications, override, thoth-dev/*, allow
+      p, role:thoth-admin, applications, action/*, thoth-dev/*, allow
       g, aicoe-thoth-devops, role:argocd-admin
       g, aicoe-thoth-devops, role:thoth-admin
 
       p, role:data-hub-admin, applications, get, data-hub/*, allow
-      p, role:data-hub-admin, applications, create, data-hub/*, allow
       p, role:data-hub-admin, applications, update, data-hub/*, allow
       p, role:data-hub-admin, applications, delete, data-hub/*, allow
       p, role:data-hub-admin, applications, sync, data-hub/*, allow
@@ -610,7 +616,6 @@ argo_rbac_cm: |
       g, data-hub-openshift-admins, role:data-hub-admin
 
       p, role:aiops-admin, applications, get, aiops/*, allow
-      p, role:aiops-admin, applications, create, aiops/*, allow
       p, role:aiops-admin, applications, update, aiops/*, allow
       p, role:aiops-admin, applications, delete, aiops/*, allow
       p, role:aiops-admin, applications, sync, aiops/*, allow
