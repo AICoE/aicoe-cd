@@ -3,7 +3,7 @@ namespace: aicoe-argocd
 # You can (ab)use `htpasswd -bnBC 10 "" <password>` to generate a password
 # from cmd line using bcrypt function (-B).
 admin_password: "$2y$10$18l2wN8YokC8rghRWbrhlu4kXCP7P9oJ7L45GHJ4RWsSR7zKXmnXy"
-repo_server_image: quay.io/aicoe/argocd:v1.6.1
+repo_server_image: quay.io/aicoe/argocd:1.6.1
 clusters:
   - name: cluster-datahub.psi.redhat.com
     data:
