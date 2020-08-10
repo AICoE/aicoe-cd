@@ -1,5 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: argocd-rbac-cm
-{{ argo_rbac_cm | default('') }}

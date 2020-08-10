@@ -1,0 +1,24 @@
+site_name: AICOE-CD
+nav:
+  - Home: index.md
+  - Guides:
+      - Get ArgoCD to manage your app: get_argocd_to_manage_your_app.md
+      - Create ArgoCD application manifest: create_argocd_application_manifest.md
+      - Give ArgoCD access to your project: give_argocd_access_to_your_project.md
+      - Manage Your App Secrets: manage_your_app_secrets.md
+      - Inclusions Explained: inclusions_explained.md
+  - Admin:
+      - admin/add_namespace_to_cluster.md
+      - admin/add_new_cluster_spec.md
+      - admin/update_gpg_key.md
+  - Permissions: argocd_project_permissions.md
+  - Development:
+      - Configuring Environment: setup_argocd_dev_enviornment.md
+  - Versions: versions.md
+  - Metrics: argocd_metrics.md
+theme:
+  name: material
+  palette:
+    primary: red
+  font:
+    text: 'Work Sans'
