@@ -1,0 +1,7 @@
+namespace: aicoe-argocd-dev
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- resources
+- privileged_resources/applications/dev_app
+- privileged_resources/projects

@@ -1,0 +1,321 @@
+- apiGroups:
+  - '*'
+  kinds:
+  - '*'
+  clusters:
+  - https://api.thoth01.lab.upshift.rdu2.redhat.com:6443
+  - https://api.thoth12.lab.upshift.rdu2.redhat.com:6443
+- apiGroups:
+  - ''
+  kinds:
+  - Binding
+  - ConfigMap
+  - Endpoints
+  - Event
+  - LimitRange
+  - PersistentVolumeClaim
+  - Pod
+  - ReplicationController
+  - ResourceQuota
+  - Secret
+  - ServiceAccount
+  - Service
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - app.kiegroup.org
+  kinds:
+  - KieApp
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - apps
+  kinds:
+  - ControllerRevision
+  - DaemonSet
+  - Deployment
+  - ReplicaSet
+  - StatefulSet
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - apps.openshift.io
+  kinds:
+  - DeploymentConfig
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - argoproj.io
+  kinds:
+  - CronWorkflow
+  - Workflow
+  - WorkflowTemplate
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - argoproj.io
+  kinds:
+  - ClusterWorkflowTemplate
+  - CronWorkflow
+  - Workflow
+  - WorkflowTemplate
+  - EventBus
+  - EventSource
+  - Gateway
+  - Sensor
+  clusters:
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - authorization.openshift.io
+  kinds:
+  - RoleBindingRestriction
+  - RoleBinding
+  - Role
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - autoscaling
+  kinds:
+  - HorizontalPodAutoscaler
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - batch
+  kinds:
+  - CronJob
+  - Job
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - build.openshift.io
+  kinds:
+  - BuildConfig
+  - Build
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - charts.helm.k8s.io
+  kinds:
+  - InfiniboxCsiDriver
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - crunchydata.com
+  kinds:
+  - Pgbackup
+  - Pgcluster
+  - Pgpolicy
+  - Pgreplica
+  - Pgtask
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - extensions
+  kinds:
+  - DaemonSet
+  - Deployment
+  - Ingress
+  - NetworkPolicy
+  - ReplicaSet
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - image.openshift.io
+  kinds:
+  - ImageStreamImage
+  - ImageStreamMapping
+  - ImageStream
+  - ImageStreamTag
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - kafka.strimzi.io
+  kinds:
+  - KafkaBridge
+  - KafkaConnector
+  - KafkaConnect
+  - KafkaConnectS2I
+  - KafkaMirrorMaker2
+  - KafkaMirrorMaker
+  - Kafka
+  - KafkaTopic
+  - KafkaUser
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - logging.openshift.io
+  kinds:
+  - ClusterLogging
+  - Collector
+  - Elasticsearch
+  - LogForwarding
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - metrics.k8s.io
+  kinds:
+  - PodMetrics
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - monitoring.coreos.com
+  kinds:
+  - Alertmanager
+  - PodMonitor
+  - Prometheus
+  - PrometheusRule
+  - ServiceMonitor
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - networking.k8s.io
+  kinds:
+  - Ingress
+  - NetworkPolicy
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - operators.coreos.com
+  kinds:
+  - CatalogSource
+  - ClusterServiceVersion
+  - InstallPlan
+  - OperatorGroup
+  - Subscription
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - org.eclipse.che
+  kinds:
+  - CheCluster
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - packages.operators.coreos.com
+  kinds:
+  - PackageManifest
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - policy
+  kinds:
+  - PodDisruptionBudget
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - quota.openshift.io
+  kinds:
+  - AppliedClusterResourceQuota
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - rbac.authorization.k8s.io
+  kinds:
+  - RoleBinding
+  - Role
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - route.openshift.io
+  kinds:
+  - Route
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - template.openshift.io
+  kinds:
+  - Template
+  - TemplateInstance
+  - Template
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - apps
+  kinds:
+  - DaemonSet
+  - Deployment
+  - ReplicaSet
+  - StatefulSet
+  clusters:
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - autoscaling.containers.ai
+  kinds:
+  - AlamedaRecommendation
+  - AlamedaScaler
+  clusters:
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - machinelearning.seldon.io
+  kinds:
+  - SeldonDeployment
+  clusters:
+  - https://datahub.psi.redhat.com:443
+- apiGroups:
+  - networking.k8s.io
+  kinds:
+  - NetworkPolicy
+  clusters:
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - opendatahub.io
+  kinds:
+  - OpenDataHub
+  clusters:
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - servicecatalog.k8s.io
+  kinds:
+  - ServiceBinding
+  - ServiceBroker
+  - ServiceClass
+  - ServiceInstance
+  - ServicePlan
+  clusters:
+  - https://datahub.psi.redhat.com:443
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - airflow.apache.org
+  kinds:
+  - AirflowBase
+  - AirflowCluster
+  clusters:
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - argoproj.io
+  kinds:
+  - EventSource
+  - Gateway
+  - Sensor
+  clusters:
+  - https://paas.stage.psi.redhat.com:443

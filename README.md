@@ -5,53 +5,32 @@ This repository contains the necessary artifacts to deploy ArgoCD to dev and pro
 ## Deployment Instructions
 
 ### Prerequisites
+Kustomize 3.8.1+
+SOPS 3.4.0+
+KSOPS 2.1.2+
 
-We use [pipenv](https://pipenv.readthedocs.io/en/latest/) to manage our
-python requirements and to ensure we're all using consistent versions of
-packages. Install pipenv by running the following command:
-
-```bash
-pip install --user pipenv
-```
+Ensure you have the key to decrypt secrets. Reach out to members of the Data Hub team for access.
 
 ### Deploying to Development
 
-Run the following command from the root of this repository to deploy the
-ArgoCD project in a development environment:
-
-```bash
-pipenv shell
-pipenv install
-ansible-playbook --ask-vault-pass playbook.yaml \
-  -e kubeconfig=$HOME/.kube/config \
-  -e target_env=dev
-```
+See [the docs](docs/setup_argocd_dev_enviornment.md) for instructions on how to setup a development environment.
 
 ### Deploying to Production
-
-Run the following command from the root of this repository to deploy the
-ArgoCD project to production (need cluster-admin):
-
-```bash
-pipenv shell
-pipenv install
-ansible-playbook --ask-vault-pass playbook.yaml \
-  -e kubeconfig=$HOME/.kube/config \
-  -e target_env=prod
+To Deploy CRDs run (cluster admin required):
+```
+kustomize build manifests/crds --enable_alpha_plugins | oc apply -f -
 ```
 
-### Ignore cluster objects
+To deploy to production run the following:
+```
+kustomize build manifests/overlays/prod --enable_alpha_plugins | oc apply -f -
+```
 
-If you want to just update deployment/configs or other namespace scoped objects
-without requiring cluster-admin, just add the additional `deploy_cluster_objects=False` var:
+To deploy ArgoCD applications/projects you will need to login as the `argocd-application-controller` SA first:
 
-```bash
-pipenv shell
-pipenv install
-ansible-playbook --ask-vault-pass playbook.yaml \
-  -e cluster_admin=False \
-  -e kubeconfig=$HOME/.kube/config \
-  -e target_env=prod
+```
+oc login --token $(oc sa get-token argocd-application-controller)
+kustomize build manifests/overlays/prod/privileged_resources/ --enable_alpha_plugins | oc apply -f -
 ```
 
 ## Dev Notes
