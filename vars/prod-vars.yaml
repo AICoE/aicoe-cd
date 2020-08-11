@@ -135,6 +135,8 @@ clusters:
         - fpokorny-thoth-dev
         - goern-thoth-dev
         - kpostlet-thoth-dev
+        - aicoe
+        - aicoe-prod-bots
         - thoth-amun-api-stage
         - thoth-amun-inspection-stage
         - thoth-backend-stage
