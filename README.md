@@ -23,14 +23,7 @@ kustomize build manifests/crds --enable_alpha_plugins | oc apply -f -
 
 To deploy to production run the following:
 ```
-kustomize build manifests/overlays/prod/resources/ --enable_alpha_plugins | oc apply -f -
-```
-
-To deploy ArgoCD applications/projects you will need to login as the `argocd-application-controller` SA first:
-
-```
-oc login --token $(oc sa get-token argocd-application-controller)
-kustomize build manifests/overlays/prod/privileged_resources/ --enable_alpha_plugins | oc apply -f -
+kustomize build manifests/overlays/prod/ --enable_alpha_plugins | oc apply -f -
 ```
 
 ## Dev Notes
