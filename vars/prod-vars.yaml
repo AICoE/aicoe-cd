@@ -144,6 +144,7 @@ clusters:
         - thoth-infra-stage
         - thoth-middletier-stage
         - thoth-test-core
+        - aiops-prod-argo
       server: https://api.ocp.prod.psi.redhat.com:6443
       config:
         bearerToken: !vault |

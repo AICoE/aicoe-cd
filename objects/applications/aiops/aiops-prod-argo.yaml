@@ -1,0 +1,39 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo.aiops-prod-argo
+spec:
+  destination:
+    namespace: aiops-prod-argo
+    server: https://api.ocp.prod.psi.redhat.com:6443
+  project: aiops
+  source:
+    path: applications/argo/overlays/aiops-prod-argo
+    repoURL: https://github.com/AICoE/aicoe-sre.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - Validate=false
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo-events.aiops-prod-argo
+spec:
+  destination:
+    namespace: aiops-prod-argo
+    server: https://api.ocp.prod.psi.redhat.com:6443
+  project: aiops
+  source:
+    path: applications/argo-events/overlays/aiops-prod-argo
+    repoURL: https://github.com/AICoE/aicoe-sre.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - Validate=false
