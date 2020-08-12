@@ -3,6 +3,5 @@ rules:
     level: error
     indent-sequences: consistent
 ignore: |
-  objects/namespace-install.yaml
-  objects/patches/argocd_rbac_cm_patch.yaml
-  objects/patches/argocd_cm_patch.yaml
+  manifests/overlays/dev/resources/configs/
+  manifests/overlays/prod/resources/configs/
