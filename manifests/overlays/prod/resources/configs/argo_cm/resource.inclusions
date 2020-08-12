@@ -54,6 +54,8 @@
   - CronWorkflow
   - Workflow
   - WorkflowTemplate
+  - Application
+  - AppProject
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
 - apiGroups:
