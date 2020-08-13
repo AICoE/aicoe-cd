@@ -63,15 +63,15 @@ Let's go over what some of the fields in the `example_app.yaml` refer to:
 
 - `metadata.name`: the name of the `Application` resource as well as the name as it appears on the ui.
 
-- `spec.project`: the ArgoCD `Project` to which this `Application` belongs, ensure that this `Project` exists in [projects](../manifests/overlays/prod/privileged_resources/projects).
+- `spec.project`: the ArgoCD `Project` to which this `Application` belongs, ensure that this `Project` exists in [projects](../manifests/overlays/prod/projects).
 
-- `spec.destination.namespace`: the target namespace for this `Application`'s deployment, ensure that this namespace exists in [clusters](../manifests/overlays/prod/resources/secrets/clusters) for the appropriate cluster/server.
+- `spec.destination.namespace`: the target namespace for this `Application`'s deployment, ensure that this namespace exists in [clusters](../manifests/overlays/prod/secrets/clusters) for the appropriate cluster/server.
 
-- `spec.destination.cluster`: the target cluster server name for this `Application`'s deployment, ensure this server exists in  [clusters](../manifests/overlays/prod/resources/secrets/clusters) for the appropriate cluster.
+- `spec.destination.cluster`: the target cluster server name for this `Application`'s deployment, ensure this server exists in  [clusters](../manifests/overlays/prod/secrets/clusters) for the appropriate cluster.
 
 - `spec.source.path`: path to the Kustomization.yaml file relative to the repo's root.
 
-- `spec.source.repoURL`: the repository holding the `Application`'s desired state, ensure this repo exists within `argo_cm` [here](../manifests/overlays/prod/resources/configs/argo_cm).
+- `spec.source.repoURL`: the repository holding the `Application`'s desired state, ensure this repo exists within `argo_cm` [here](../manifests/overlays/prod/configs/argo_cm).
 
   In case you are adding a private repo:
 

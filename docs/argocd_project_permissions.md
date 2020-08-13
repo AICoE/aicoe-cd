@@ -20,7 +20,7 @@ OpenShift groups have the following ArgoCD role associations:
 | `data-hub-openshift-admins` | `data-hub-admin` |
 | `aicoe-aiops-devops`        | `aiops-admin`    |
 
-ArgoCD roles have policies that define their access to ArgoCD resources, they are defined in [policy.csv](../manifests/overlays/prod/resources/configs/argo_rbac_cm/policy.csv).
+ArgoCD roles have policies that define their access to ArgoCD resources, they are defined in [policy.csv](../manifests/overlays/prod/configs/argo_rbac_cm/policy.csv).
 
 Read about how these policies and roles work [here](https://argoproj.github.io/argo-cd/operator-manual/rbac/).
 
