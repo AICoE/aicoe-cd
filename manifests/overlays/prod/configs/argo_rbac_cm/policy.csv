@@ -1,0 +1,49 @@
+p, role:argocd-admin, certificates, get, *, allow
+p, role:argocd-admin, certificates, create, *, allow
+p, role:argocd-admin, certificates, update, *, allow
+p, role:argocd-admin, clusters, get, *, allow
+p, role:argocd-admin, clusters, create, *, allow
+p, role:argocd-admin, clusters, update, *, allow
+p, role:argocd-admin, repositories, get, *, allow
+p, role:argocd-admin, repositories, create, *, allow
+p, role:argocd-admin, repositories, update, *, allow
+p, role:argocd-admin, projects, get, *, allow
+p, role:argocd-admin, projects, create, *, allow
+p, role:argocd-admin, projects, update, *, allow
+p, role:argocd-admin, accounts, get, *, allow
+p, role:argocd-admin, accounts, update, *, allow
+
+p, role:thoth-admin, applications, get, thoth/*, allow
+p, role:thoth-admin, applications, update, thoth/*, allow
+p, role:thoth-admin, applications, delete, thoth/*, allow
+p, role:thoth-admin, applications, sync, thoth/*, allow
+p, role:thoth-admin, applications, override, thoth/*, allow
+p, role:thoth-admin, applications, action/*, thoth/*, allow
+
+p, role:thoth-admin, applications, get, thoth-dev/*, allow
+p, role:thoth-admin, applications, create, thoth-dev/*, allow
+p, role:thoth-admin, applications, update, thoth-dev/*, allow
+p, role:thoth-admin, applications, delete, thoth-dev/*, allow
+p, role:thoth-admin, applications, sync, thoth-dev/*, allow
+p, role:thoth-admin, applications, override, thoth-dev/*, allow
+p, role:thoth-admin, applications, action/*, thoth-dev/*, allow
+g, aicoe-thoth-devops, role:argocd-admin
+g, aicoe-thoth-devops, role:thoth-admin
+
+p, role:data-hub-admin, applications, get, data-hub/*, allow
+p, role:data-hub-admin, applications, update, data-hub/*, allow
+p, role:data-hub-admin, applications, delete, data-hub/*, allow
+p, role:data-hub-admin, applications, sync, data-hub/*, allow
+p, role:data-hub-admin, applications, override, data-hub/*, allow
+p, role:data-hub-admin, applications, action/*, data-hub/*, allow
+g, data-hub-openshift-admins, role:argocd-admin
+g, data-hub-openshift-admins, role:data-hub-admin
+
+p, role:aiops-admin, applications, get, aiops/*, allow
+p, role:aiops-admin, applications, update, aiops/*, allow
+p, role:aiops-admin, applications, delete, aiops/*, allow
+p, role:aiops-admin, applications, sync, aiops/*, allow
+p, role:aiops-admin, applications, override, aiops/*, allow
+p, role:aiops-admin, applications, action/*, aiops/*, allow
+g, aicoe-aiops-devops, role:argocd-admin
+g, aicoe-aiops-devops, role:aiops-admin

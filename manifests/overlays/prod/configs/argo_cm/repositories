@@ -1,0 +1,12 @@
+- type: git
+  url: https://github.com/goern/strimzi-application.git
+- type: git
+  url: https://github.com/goern/thoth-application.git
+- type: git
+  url: https://github.com/thoth-station/thoth-application.git
+- type: git
+  url: https://github.com/thoth-station/thoth-ci.git
+- type: git
+  url: https://github.com/AICoE/aicoe-sre.git
+- type: git
+  url: https://github.com/AICoE/aicoe-cd.git
