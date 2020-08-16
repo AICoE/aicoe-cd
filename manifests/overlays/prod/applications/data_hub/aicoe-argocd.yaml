@@ -10,7 +10,7 @@ spec:
   source:
     path: manifests/overlays/prod
     repoURL: https://github.com/AICoE/aicoe-cd.git
-    targetRevision: kustomize_argocd
+    targetRevision: HEAD
   syncPolicy:
     syncOptions:
     - Validate=false
