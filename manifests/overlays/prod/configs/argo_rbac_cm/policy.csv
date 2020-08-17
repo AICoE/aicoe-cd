@@ -36,6 +36,14 @@ p, role:data-hub-admin, applications, delete, data-hub/*, allow
 p, role:data-hub-admin, applications, sync, data-hub/*, allow
 p, role:data-hub-admin, applications, override, data-hub/*, allow
 p, role:data-hub-admin, applications, action/*, data-hub/*, allow
+
+p, role:data-hub-admin, applications, get, data-hub-dev/*, allow
+p, role:data-hub-admin, applications, create, data-hub-dev/*, allow
+p, role:data-hub-admin, applications, update, data-hub-dev/*, allow
+p, role:data-hub-admin, applications, delete, data-hub-dev/*, allow
+p, role:data-hub-admin, applications, sync, data-hub-dev/*, allow
+p, role:data-hub-admin, applications, override, data-hub-dev/*, allow
+p, role:data-hub-admin, applications, action/*, data-hub-dev/*, allow
 g, data-hub-openshift-admins, role:argocd-admin
 g, data-hub-openshift-admins, role:data-hub-admin
 
