@@ -10,3 +10,11 @@
   url: https://github.com/AICoE/aicoe-sre.git
 - type: git
   url: https://github.com/AICoE/aicoe-cd.git
+- type: git
+  url: https://github.com/aicoe-aiops/openshift-sme-mailing-list-analysis.git
+  usernameSecret:
+    name: srcops
+    key: username
+  passwordSecret:
+    name: srcops
+    key: token
