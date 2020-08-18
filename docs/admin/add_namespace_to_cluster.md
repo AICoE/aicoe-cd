@@ -7,7 +7,7 @@
 
 ## Instructions
 
-Namespaces are added to ArgoCD by altering the corresponding cluster spec. Cluster specs are defined within the [clusters](../../manifests/overlays/prod/secrets/clusters) folder.
+Namespaces are added to ArgoCD by altering the corresponding cluster spec. Cluster specs are defined within the [clusters](https://github.com/AICoE/aicoe-cd/tree/master/manifests/overlays/prod/secrets/clusters) folder.
 
 Open the file in the sops editor, for example if updating the cluster spec `apps.ocp.prod.psi.redhat.com.enc.yaml` you would execute:
 ```bash

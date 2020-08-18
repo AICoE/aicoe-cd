@@ -12,6 +12,8 @@ metadata:
   namespace: <application_namespace>
 roleRef:
   name: <role>
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
 subjects:
   - kind: ServiceAccount
     name: argocd-manager
