@@ -1,7 +1,21 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+- stage/core-backend.yaml
+- stage/core-frontend.yaml
+- stage/core-graph.yaml
+- stage/core-infra.yaml
+- stage/core-middletier.yaml
+- stage/stage-thoth-adviser.yaml
 - stage/stage-thoth-chat-notification.yaml
+- stage/stage-thoth-cve-update.yaml
+- stage/stage-thoth-graph-sync-backend.yaml
+- stage/stage-thoth-graph-sync-middletier.yaml
+- stage/stage-thoth-management-api.yaml
+- stage/stage-thoth-package-extract.yaml
+- stage/stage-thoth-security-indicators.yaml
+- stage/stage-thoth-solver.yaml
+- stage/stage-thoth-user-api.yaml
 - test/test-amun.yaml
 - test/test-thoth-advise-reporter.yaml
 - test/test-thoth-adviser.yaml
