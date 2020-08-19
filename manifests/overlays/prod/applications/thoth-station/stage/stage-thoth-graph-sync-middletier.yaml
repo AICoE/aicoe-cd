@@ -2,16 +2,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: stage-thoth-chat-notification
+  name: stage-thoth-graph-sync-middletier
 spec:
   project: thoth
   source:
     repoURL: 'https://github.com/thoth-station/thoth-application.git'
-    path: chat-notification/overlays/stage
+    path: graph-sync/overlays/stage
     targetRevision: master
   destination:
     server: 'https://api.ocp.prod.psi.redhat.com:6443'
-    namespace: thoth-infra-stage
+    namespace: thoth-middletier-stage
   syncPolicy:
     automated:
       selfHeal: true
