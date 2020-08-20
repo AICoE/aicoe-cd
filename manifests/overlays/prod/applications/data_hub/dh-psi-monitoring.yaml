@@ -9,8 +9,8 @@ spec:
   project: data-hub
   source:
     path: monitoring/psi-prod-cluster/overlays/prod
-    repoURL: https://github.com/AICoE/aicoe-sre.git
-    targetRevision: HEAD
+    repoURL: https://github.com/AICoE/internal-data-hub.git
+    targetRevision: production
   syncPolicy:
     syncOptions:
     - Validate=false

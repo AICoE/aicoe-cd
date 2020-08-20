@@ -8,9 +8,9 @@ spec:
     server: https://paas.stage.psi.redhat.com:443
   project: data-hub
   source:
-    path: applications/jupyterhub/overlays/stage
-    repoURL: https://github.com/AICoE/aicoe-sre.git
-    targetRevision: HEAD
+    path: jupyterhub/overlays/stage
+    repoURL: https://github.com/AICoE/internal-data-hub.git
+    targetRevision: production
   syncPolicy:
     automated:
       prune: true
