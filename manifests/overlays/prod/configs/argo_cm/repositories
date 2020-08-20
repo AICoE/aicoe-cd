@@ -1,15 +1,9 @@
 - type: git
-  url: https://github.com/goern/strimzi-application.git
-- type: git
-  url: https://github.com/goern/thoth-application.git
-- type: git
-  url: https://github.com/thoth-station/thoth-application.git
-- type: git
-  url: https://github.com/thoth-station/thoth-ci.git
+  url: https://github.com/AICoE/aicoe-cd.git
 - type: git
   url: https://github.com/AICoE/aicoe-sre.git
 - type: git
-  url: https://github.com/AICoE/aicoe-cd.git
+  url: https://github.com/AICoE/internal-data-hub.git
 - type: git
   url: https://github.com/aicoe-aiops/openshift-sme-mailing-list-analysis.git
   usernameSecret:
@@ -18,3 +12,12 @@
   passwordSecret:
     name: srcops
     key: token
+- type: git
+  url: https://github.com/goern/strimzi-application.git
+- type: git
+  url: https://github.com/goern/thoth-application.git
+- type: git
+  url: https://github.com/thoth-station/thoth-application.git
+- type: git
+  url: https://github.com/thoth-station/thoth-ci.git
+
