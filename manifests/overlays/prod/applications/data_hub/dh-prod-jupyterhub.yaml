@@ -8,9 +8,9 @@ spec:
     server: https://datahub.psi.redhat.com:443
   project: data-hub
   source:
-    path: applications/jupyterhub/overlays/prod
-    repoURL: https://github.com/AICoE/aicoe-sre.git
-    targetRevision: HEAD
+    path: jupyterhub/overlays/prod
+    repoURL: https://github.com/AICoE/internal-data-hub.git
+    targetRevision: production
   syncPolicy:
     syncOptions:
     - Validate=false

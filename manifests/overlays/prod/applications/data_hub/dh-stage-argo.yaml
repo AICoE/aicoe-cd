@@ -8,9 +8,9 @@ spec:
     server: https://paas.stage.psi.redhat.com:443
   project: data-hub
   source:
-    path: applications/argo/overlays/dh-stage-argo
-    repoURL: https://github.com/AICoE/aicoe-sre.git
-    targetRevision: HEAD
+    path: argo/overlays/dh-stage-argo
+    repoURL: https://github.com/AICoE/internal-data-hub.git
+    targetRevision: production
   syncPolicy:
     automated:
       prune: true
@@ -28,9 +28,9 @@ spec:
     server: https://paas.stage.psi.redhat.com:443
   project: data-hub
   source:
-    path: applications/argo-events/overlays/dh-stage-argo
-    repoURL: https://github.com/AICoE/aicoe-sre.git
-    targetRevision: HEAD
+    path: argo-events/overlays/dh-stage-argo
+    repoURL: https://github.com/AICoE/internal-data-hub.git
+    targetRevision: production
   syncPolicy:
     automated:
       prune: true
