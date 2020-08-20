@@ -1,0 +1,18 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: stage-thoth-amun-inspection
+spec:
+  project: thoth
+  source:
+    repoURL: 'https://github.com/thoth-station/thoth-application.git'
+    path: amun/overlays/amun-inspection
+    targetRevision: HEAD
+  destination:
+    server: 'https://api.ocp.prod.psi.redhat.com:6443'
+    namespace: thoth-amun-inspection-stage
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
