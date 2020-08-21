@@ -20,7 +20,9 @@ resources:
 - stage/stage-thoth-graph-sync-middletier.yaml
 - stage/stage-thoth-kebechet.yaml
 - stage/stage-thoth-management-api.yaml
+- stage/stage-thoth-metrics-exporter.yaml
 - stage/stage-thoth-package-extract.yaml
+- stage/stage-thoth-package-releases.yaml
 - stage/stage-thoth-revsolver.yaml
 - stage/stage-thoth-security-indicators.yaml
 - stage/stage-thoth-solver.yaml
@@ -39,6 +41,7 @@ resources:
 - test/test-thoth-metrics-exporter.yaml
 - test/test-thoth-mi-scheduler.yaml
 - test/test-thoth-package-extract.yaml
+- test/test-thoth-package-releases.yaml
 - test/test-thoth-package-update.yaml
 - test/test-thoth-revsolver.yaml
 - test/test-thoth-security-indicators.yaml
