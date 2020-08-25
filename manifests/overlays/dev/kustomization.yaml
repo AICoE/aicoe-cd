@@ -14,6 +14,7 @@ configMapGenerator:
   - configs/argo_cm/dex.config
   - configs/argo_cm/kustomize.buildOptions
   - configs/argo_cm/url
+  - configs/argo_cm/configManagementPlugins
 - name: argocd-rbac-cm
   behavior: replace
   files:
