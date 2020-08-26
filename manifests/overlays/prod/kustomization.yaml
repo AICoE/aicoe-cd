@@ -15,6 +15,7 @@ configMapGenerator:
   - configs/argo_cm/resource.exclusions
   - configs/argo_cm/resource.inclusions
   - configs/argo_cm/url
+  - configs/argo_cm/configManagementPlugins
 - name: argocd-rbac-cm
   behavior: replace
   files:
