@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dh-stage-kafka
+spec:
+  destination:
+    namespace: dh-stage-message-bus
+    server: 'https://paas.stage.psi.redhat.com:443'
+  project: data-hub
+  source:
+    path: kafka
+    repoURL: https://github.com/AICoE/internal-data-hub.git
+    targetRevision: production
+    plugin:
+      name: helmSecrets
+      env:
+        - name: VALUES_FILES
+          value: "-f secrets.enc.yaml -f helm_vars/stage/secrets.yaml -f helm_vars/stage/values.yaml"
+  syncPolicy:
+    syncOptions:
+      - Validate=false
