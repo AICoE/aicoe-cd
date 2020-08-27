@@ -22,7 +22,7 @@ ENV XDG_DATA_HOME=/home/argocd/.local/share
 ENV XDG_CACHE_HOME=/home/argocd/.cache
 ENV XDG_CONFIG_HOME=/home/argocd/.config
 ENV KUSTOMIZE_PLUGIN_PATH=$XDG_CONFIG_HOME/kustomize/plugin/
-ARG SOPS_VERSION="3.2.0"
+ARG SOPS_VERSION="v3.6.0"
 ARG HELM_SECRETS_VERSION="2.0.2"
 ARG PKG_NAME=ksops
 
