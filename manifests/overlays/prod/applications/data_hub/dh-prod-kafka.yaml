@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dh-stage-kafka
+  name: dh-prod-kafka
 spec:
   destination:
-    namespace: dh-stage-message-bus
-    server: 'https://paas.stage.psi.redhat.com:443'
+    namespace: dh-prod-message-bus
+    server: 'https://datahub.psi.redhat.com:443'
   project: data-hub
   source:
     path: kafka
@@ -15,10 +15,7 @@ spec:
       name: helmSecrets
       env:
         - name: VALUES_FILES
-          value: "-f secrets.enc.yaml -f helm_vars/stage/secrets.yaml -f helm_vars/stage/values.yaml"
+          value: "-f secrets.enc.yaml -f helm_vars/prod/secrets.yaml -f helm_vars/prod/values.yaml"
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
     syncOptions:
       - Validate=false

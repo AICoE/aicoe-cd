@@ -4,6 +4,7 @@ resources:
 - aicoe-argocd.yaml
 - dh-prod-jupyterhub.yaml
 - dh-psi-monitoring.yaml
+- dh-prod-kafka.yaml
 - dh-stage-argo.yaml
 - dh-stage-jupyterhub.yaml
 - dh-stage-kafka.yaml
