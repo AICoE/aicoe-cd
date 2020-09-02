@@ -37,7 +37,8 @@ metadata:
 type: Opaque
 stringData:
     name:  datahub.psi.redhat.com
-    config: {"bearerToken": ${SA_TOKEN}, "tlsClientConfig": {"insecure": true}}
+    config: |
+        {"bearerToken": ${SA_TOKEN}, "tlsClientConfig": {"insecure": true}}
     namespaces: namespace_1,namespace_2
     server: https://datahub.psi.redhat.com:44
 ```
