@@ -44,9 +44,13 @@ stringData:
 ```
 
 Let's go over what some of the fields in the `stringData` field refer to:
+
 - `name`: Name for this cluster, appears in the ArgoCD UI
+
 - `config`: The token goes here, replace the contents of ${SA_TOKEN} with the one retrieved earlier.
+
 - `namespace`: List of namespaces ArgoCD has permissions to deploy to, comma-separated, no whitespace
+
 - `server`: Cluster api server hostname, can be retrieved by running `oc whoami --show-server`
 
 SOPS encrypt the manifest and store it in the `clusters` directory.
