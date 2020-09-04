@@ -13,7 +13,7 @@ Ensure you have the key to decrypt secrets. Reach out to members of the Data Hub
 
 ### Deploying to Development
 
-See [the docs](docs/setup_argocd_dev_enviornment.md) for instructions on how to setup a development environment.
+See [the docs](docs/setup_argocd_dev_environment.md) for instructions on how to setup a development environment.
 
 ### Deploying to Production
 To Deploy CRDs run (cluster admin required):
