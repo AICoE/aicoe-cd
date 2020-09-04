@@ -1,12 +1,13 @@
 # Deploying a development environment
 
 ## Prequisites
-* An OCP 4.x Development cluster
-* Must have cluster admin
+* An OCP 4.x Development cluster.
+* Must have cluster admin.
+* Follow the steps [here](manage_your_app_secrets.md).
 
 ## Instructions
 
-Create the project `aicoe-argocd-dev` and `argocd-test`. The latter wll be used
+Create the project `aicoe-argocd-dev` and `argocd-test`. The latter will be used
 for deploying a dev application via ArgoCD.
 
 ```bash

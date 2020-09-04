@@ -13,7 +13,7 @@ nav:
       - admin/update_gpg_key.md
   - Permissions: argocd_project_permissions.md
   - Development:
-      - Configuring Environment: setup_argocd_dev_enviornment.md
+      - Configuring Environment: setup_argocd_dev_environment.md
   - Versions: versions.md
   - Metrics: argocd_metrics.md
 theme:
