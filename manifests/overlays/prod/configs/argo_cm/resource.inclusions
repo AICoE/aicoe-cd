@@ -7,6 +7,23 @@
   - https://api.thoth12.lab.upshift.rdu2.redhat.com:6443
   - https://api.ocp4.idh.dev.datahub.redhat.com:6443
 - apiGroups:
+  - tekton.dev
+  kinds:
+  - Condition
+  - Pipeline
+  - PipelineResource
+  - Task
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - triggers.tekton.dev
+  kinds:
+  - EventListener
+  - TriggerBinding
+  - TriggerTemplate
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
   - ''
   kinds:
   - Binding
