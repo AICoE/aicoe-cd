@@ -69,9 +69,6 @@
 - apiGroups:
   - argoproj.io
   kinds:
-  - CronWorkflow
-  - Workflow
-  - WorkflowTemplate
   - Application
   - AppProject
   clusters:
@@ -88,6 +85,7 @@
   - Gateway
   - Sensor
   clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
   - authorization.openshift.io
@@ -331,13 +329,5 @@
   kinds:
   - AirflowBase
   - AirflowCluster
-  clusters:
-  - https://paas.stage.psi.redhat.com:443
-- apiGroups:
-  - argoproj.io
-  kinds:
-  - EventSource
-  - Gateway
-  - Sensor
   clusters:
   - https://paas.stage.psi.redhat.com:443
