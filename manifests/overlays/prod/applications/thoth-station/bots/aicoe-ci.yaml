@@ -1,0 +1,16 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: aicoe-ci
+spec:
+  project: thoth
+  source:
+    repoURL: 'https://github.com/AICoE/aicoe-ci.git'
+    path: .
+    targetRevision: HEAD
+  destination:
+    server: 'https://api.ocp.prod.psi.redhat.com:6443'
+    namespace: aicoe-infra-prod
+  syncPolicy:
+    automated: {}
