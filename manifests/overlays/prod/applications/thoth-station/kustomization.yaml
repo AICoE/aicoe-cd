@@ -16,9 +16,11 @@ resources:
 - stage/stage-thoth-amun-inspection.yaml
 - stage/stage-thoth-chat-notification.yaml
 - stage/stage-thoth-cve-update.yaml
+- stage/stage-thoth-graph-backup.yaml
 - stage/stage-thoth-graph-refresh.yaml
 - stage/stage-thoth-graph-sync-backend.yaml
 - stage/stage-thoth-graph-sync-middletier.yaml
+- stage/stage-thoth-investigator.yaml
 - stage/stage-thoth-kebechet.yaml
 - stage/stage-thoth-management-api.yaml
 - stage/stage-thoth-metrics-exporter.yaml
@@ -34,6 +36,7 @@ resources:
 - test/test-thoth-adviser.yaml
 - test/test-thoth-chat-notification.yaml
 - test/test-thoth-cve-update.yaml
+- test/test-thoth-graph-backup.yaml
 - test/test-thoth-graph-refresh.yaml
 - test/test-thoth-graph-sync.yaml
 - test/test-thoth-investigator.yaml
