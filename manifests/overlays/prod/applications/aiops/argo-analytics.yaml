@@ -4,8 +4,8 @@ metadata:
   name: openshift-sme-mailing-list-analysis
 spec:
   destination:
-    namespace: dh-stage-argo
-    server: https://paas.stage.psi.redhat.com:443
+    namespace: aiops-prod-argo
+    server: https://api.ocp.prod.psi.redhat.com:6443
   project: aiops
   source:
     path: manifests
