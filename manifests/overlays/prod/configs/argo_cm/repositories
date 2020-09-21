@@ -5,7 +5,7 @@
 - type: git
   url: https://github.com/AICoE/aicoe-sre.git
 - type: git
-  url: https://github.com/AICoE/internal-data-hub.git
+  url: https://github.com/AICoE/idh-manifests.git
 - type: git
   url: https://github.com/aicoe-aiops/openshift-sme-mailing-list-analysis.git
   usernameSecret:
@@ -14,8 +14,6 @@
   passwordSecret:
     name: srcops
     key: token
-- type: git
-  url: https://github.com/anishasthana/internal-data-hub.git
 - type: git
   url: https://github.com/goern/strimzi-application.git
 - type: git
