@@ -9,7 +9,7 @@ spec:
   project: data-hub
   source:
     path: argo/overlays/dh-stage-argo
-    repoURL: https://github.com/AICoE/internal-data-hub.git
+    repoURL: https://github.com/AICoE/idh-manifests.git
     targetRevision: production
   syncPolicy:
     automated:
@@ -29,7 +29,7 @@ spec:
   project: data-hub
   source:
     path: argo-events/overlays/dh-stage-argo
-    repoURL: https://github.com/AICoE/internal-data-hub.git
+    repoURL: https://github.com/AICoE/idh-manifests.git
     targetRevision: production
   syncPolicy:
     automated:
