@@ -40,6 +40,7 @@
   - Service
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
@@ -64,6 +65,7 @@
   - StatefulSet
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
   - apps.openshift.io
@@ -71,6 +73,7 @@
   - DeploymentConfig
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
@@ -95,6 +98,7 @@
   - Role
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
@@ -103,6 +107,7 @@
   - HorizontalPodAutoscaler
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
@@ -112,6 +117,7 @@
   - Job
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
@@ -121,6 +127,7 @@
   - Build
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
@@ -129,6 +136,7 @@
   - InfiniboxCsiDriver
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
 - apiGroups:
   - crunchydata.com
   kinds:
@@ -229,6 +237,7 @@
   - PodMetrics
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
 - apiGroups:
   - monitoring.coreos.com
   kinds:
@@ -258,6 +267,7 @@
   - NetworkPolicy
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
 - apiGroups:
   - operator.ibm.com
   kinds:
@@ -281,6 +291,7 @@
   - Subscription
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
 - apiGroups:
   - org.eclipse.che
   kinds:
@@ -293,12 +304,14 @@
   - PackageManifest
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
 - apiGroups:
   - policy
   kinds:
   - PodDisruptionBudget
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
@@ -307,6 +320,7 @@
   - AppliedClusterResourceQuota
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
@@ -316,6 +330,7 @@
   - Role
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
@@ -324,6 +339,7 @@
   - Route
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
@@ -345,6 +361,7 @@
   - Template
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
@@ -355,6 +372,36 @@
   - TriggerTemplate
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - argoproj.io
+  kinds:
+  - CronWorkflow
+  - Workflow
+  - WorkflowTemplate
+  clusters:
+  - https://api.ocp4.prod.psi.redhat.com:6443
+- apiGroups:
+  - extensions
+  kinds:
+  - Ingress
+  clusters:
+  - https://api.ocp4.prod.psi.redhat.com:6443
+- apiGroups:
+  - gitlab.com
+  kinds:
+  - Runner
+  clusters:
+  - https://api.ocp4.prod.psi.redhat.com:6443
+- apiGroups:
+  - image.openshift.io
+  kinds:
+  - ImageStreamImage
+  - ImageStreamMapping
+  - ImageStream
+  - ImageStreamTag
+  - ImageTag
+  clusters:
+  - https://api.ocp4.prod.psi.redhat.com:6443
 - apiGroups:
   - apps
   kinds:
