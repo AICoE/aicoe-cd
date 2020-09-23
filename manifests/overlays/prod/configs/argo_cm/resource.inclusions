@@ -49,6 +49,12 @@
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
 - apiGroups:
+  - app.redislabs.com
+  kinds:
+  - RedisEnterpriseCluster
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
   - apps
   kinds:
   - ControllerRevision
@@ -58,6 +64,7 @@
   - StatefulSet
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://paas.stage.psi.redhat.com:443
 - apiGroups:
   - apps.openshift.io
   kinds:
@@ -71,22 +78,15 @@
   kinds:
   - Application
   - AppProject
-  clusters:
-  - https://api.ocp.prod.psi.redhat.com:6443
-- apiGroups:
-  - argoproj.io
-  kinds:
-  - ClusterWorkflowTemplate
   - CronWorkflow
-  - Workflow
-  - WorkflowTemplate
   - EventBus
   - EventSource
   - Gateway
   - Sensor
+  - Workflow
+  - WorkflowTemplate
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
-  - https://paas.stage.psi.redhat.com:443
 - apiGroups:
   - authorization.openshift.io
   kinds:
@@ -163,6 +163,20 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
+  - integreatly.org
+  kinds:
+  - GrafanaDashboard
+  - GrafanaDataSource
+  - Grafana
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - jaegertracing.io
+  kinds:
+  - Jaeger
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
   - kafka.strimzi.io
   kinds:
   - KafkaBridge
@@ -171,6 +185,7 @@
   - KafkaConnectS2I
   - KafkaMirrorMaker2
   - KafkaMirrorMaker
+  - KafkaRebalance
   - Kafka
   - KafkaTopic
   - KafkaUser
@@ -179,12 +194,33 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
+  - kiali.io
+  kinds:
+  - Kiali
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
   - logging.openshift.io
   kinds:
   - ClusterLogging
   - Collector
   - Elasticsearch
   - LogForwarding
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - machinelearning.seldon.io
+  kinds:
+  - SeldonDeployment
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+  - https://datahub.psi.redhat.com:443
+- apiGroups:
+  - maistra.io
+  kinds:
+  - ServiceMeshControlPlane
+  - ServiceMeshMemberRoll
+  - ServiceMeshMember
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
 - apiGroups:
@@ -204,10 +240,35 @@
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
 - apiGroups:
+  - monitoring.kiali.io
+  kinds:
+  - MonitoringDashboard
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - monitoringcontroller.cloud.ibm.com
+  kinds:
+  - MonitoringDashboard
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
   - networking.k8s.io
   kinds:
   - Ingress
   - NetworkPolicy
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - operator.ibm.com
+  kinds:
+  - Grafana
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
+  - operator.knative.dev
+  kinds:
+  - KnativeEventing
+  - KnativeServing
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
 - apiGroups:
@@ -266,6 +327,17 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
+  - tekton.dev
+  kinds:
+  - Condition
+  - PipelineResource
+  - PipelineRun
+  - Pipeline
+  - TaskRun
+  - Task
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
   - template.openshift.io
   kinds:
   - Template
@@ -276,6 +348,14 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
+  - triggers.tekton.dev
+  kinds:
+  - EventListener
+  - TriggerBinding
+  - TriggerTemplate
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
   - apps
   kinds:
   - DaemonSet
@@ -284,7 +364,6 @@
   - StatefulSet
   clusters:
   - https://datahub.psi.redhat.com:443
-  - https://paas.stage.psi.redhat.com:443
 - apiGroups:
   - autoscaling.containers.ai
   kinds:
@@ -293,12 +372,6 @@
   clusters:
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
-- apiGroups:
-  - machinelearning.seldon.io
-  kinds:
-  - SeldonDeployment
-  clusters:
-  - https://datahub.psi.redhat.com:443
 - apiGroups:
   - networking.k8s.io
   kinds:
@@ -329,5 +402,17 @@
   kinds:
   - AirflowBase
   - AirflowCluster
+  clusters:
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - argoproj.io
+  kinds:
+  - CronWorkflow
+  - EventBus
+  - EventSource
+  - Gateway
+  - Sensor
+  - Workflow
+  - WorkflowTemplate
   clusters:
   - https://paas.stage.psi.redhat.com:443
