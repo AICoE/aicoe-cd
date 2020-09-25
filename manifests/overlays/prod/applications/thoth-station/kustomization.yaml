@@ -26,6 +26,7 @@ resources:
 - stage/stage-thoth-metrics-exporter.yaml
 - stage/stage-thoth-package-extract.yaml
 - stage/stage-thoth-package-releases.yaml
+- stage/stage-thoth-package-update.yaml
 - stage/stage-thoth-revsolver.yaml
 - stage/stage-thoth-security-indicators.yaml
 - stage/stage-thoth-solver.yaml
