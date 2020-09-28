@@ -15,7 +15,6 @@
   - Task
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
-  - https://api.ocp4.prod.psi.redhat.com:6443
 - apiGroups:
   - triggers.tekton.dev
   kinds:
@@ -24,7 +23,6 @@
   - TriggerTemplate
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
-  - https://api.ocp4.prod.psi.redhat.com:6443
 - apiGroups:
   - ''
   kinds:
@@ -345,6 +343,17 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
+  - tekton.dev
+  kinds:
+  - Condition
+  - PipelineResource
+  - PipelineRun
+  - Pipeline
+  - TaskRun
+  - Task
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
+- apiGroups:
   - template.openshift.io
   kinds:
   - Template
@@ -355,6 +364,14 @@
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - triggers.tekton.dev
+  kinds:
+  - EventListener
+  - TriggerBinding
+  - TriggerTemplate
+  clusters:
+  - https://api.ocp.prod.psi.redhat.com:6443
 - apiGroups:
   - argoproj.io
   kinds:
