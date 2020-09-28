@@ -16,3 +16,9 @@ spec:
     automated:
       selfHeal: true
       prune: true
+  ignoreDifferences:
+    - group: template.openshift.io
+      kind: Template
+      name: graph-sync-job
+      jsonPointers:
+        - /metadata/labels
