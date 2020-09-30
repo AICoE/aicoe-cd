@@ -10,7 +10,7 @@ spec:
     path: .
     targetRevision: HEAD
   destination:
-    server: 'https://api.ocp.prod.psi.redhat.com:6443'
+    server: 'https://api.ocp4.prod.psi.redhat.com:6443'
     namespace: aicoe-infra-prod
   syncPolicy:
     automated: {}
