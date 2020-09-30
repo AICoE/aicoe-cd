@@ -7,6 +7,8 @@
 - type: git
   url: https://github.com/AICoE/idh-manifests.git
 - type: git
+  url: https://github.com/AICoE/internal-data-hub.git
+- type: git
   url: https://github.com/aicoe-aiops/openshift-sme-mailing-list-analysis.git
   usernameSecret:
     name: srcops
