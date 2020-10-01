@@ -3,11 +3,13 @@
 When migrating an application's deployment to be managed by ArgoCD use the following checklist to verify your process.
 
 - Ensure your application manifests can be built using Kustomize.
+    - Specify your apiVersion in your manifests with the apigroup included (e.g. for Deployments use `apps.openshift.io/v1` instead of just `v1`)
 - If using secrets, make sure to include the .sops.yaml file in your repository.
     - See [here](manage_your_app_secrets.md) for more info.
 - Create the role granting access to namespace.
     - See [here](give_argocd_access_to_your_project.md) for more info.
     - This role should be tracked in your application manifest repository.
+    - If adding this role as part of the PR below, make sure not to include it in the `kustomization.yaml` file so that ArgoCD does not deploy it (due to lack of permissions)
 
 The following items require a PR to the `aicoe-cd` repository, and require an `aicoe-sre` team member to merge/deploy changes:
 
