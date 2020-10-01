@@ -3,6 +3,11 @@ kind: Application
 metadata:
   name: dh-stage-rsyslog
 spec:
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      jsonPointers:
+        - /spec/containers/0/image
   destination:
     namespace: dh-stage-ingest
     server: https://paas.stage.psi.redhat.com:443
