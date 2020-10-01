@@ -29,6 +29,7 @@ resources:
 - stage/stage-thoth-package-update.yaml
 - stage/stage-thoth-revsolver.yaml
 - stage/stage-thoth-security-indicators.yaml
+- stage/stage-thoth-slo-reporter.yaml
 - stage/stage-thoth-solver.yaml
 - stage/stage-thoth-user-api.yaml
 - test/core-test.yaml
