@@ -9,3 +9,4 @@ resources:
 - dh-stage-jupyterhub.yaml
 - dh-stage-kafka.yaml
 - dh-stage-rsyslog.yaml
+- dh-prod-rsyslog.yaml
