@@ -7,4 +7,4 @@ metadata:
     app.kubernetes.io/name: argocd-dex-server
     app.kubernetes.io/part-of: argocd
   annotations:
-    serviceaccounts.openshift.io/oauth-redirecturi.aicoe-argocd: https://argocd-server-aicoe-argocd.apps.ocp.prod.psi.redhat.com/api/dex/callback
+    serviceaccounts.openshift.io/oauth-redirecturi.aicoe-argocd: "{\"kind\":\"OAuthRedirectReference\",\"apiVersion\":\"v1\",\"reference\":{\"kind\":\"Route\",\"name\":\"argocd-server\"}}"
