@@ -4,8 +4,8 @@ metadata:
   name: aicoe-argocd
 spec:
   destination:
+    name: api.ocp4.prod.psi.redhat.com
     namespace: aicoe-argocd
-    server: https://api.ocp.prod.psi.redhat.com:6443
   project: data-hub
   source:
     path: manifests/overlays/prod
