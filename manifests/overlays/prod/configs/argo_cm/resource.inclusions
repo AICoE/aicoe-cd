@@ -93,6 +93,13 @@
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
 - apiGroups:
+  - argoproj.io
+  kinds:
+  - Application
+  - AppProject
+  clusters:
+  - https://api.ocp4.prod.psi.redhat.com:6443
+- apiGroups:
   - authorization.openshift.io
   kinds:
   - RoleBindingRestriction
