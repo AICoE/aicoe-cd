@@ -187,6 +187,7 @@
   - Grafana
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
 - apiGroups:
   - jaegertracing.io
   kinds:
@@ -257,6 +258,7 @@
   - ServiceMonitor
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
 - apiGroups:
   - monitoring.kiali.io
   kinds:
