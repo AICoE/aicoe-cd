@@ -3,7 +3,6 @@ kind: Kustomization
 resources:
 - bots/aicoe-ci.yaml
 - bots/thoth-nepthys.yaml
-- bots/thoth-qeb-hwt.yaml
 - bots/thoth-sefkhet-abwy.yaml
 - stage/stage-amun.yaml
 - stage/core-backend.yaml
