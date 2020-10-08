@@ -4,8 +4,8 @@ metadata:
   name: dh-psi-monitoring
 spec:
   destination:
+    name: api.ocp4.prod.psi.redhat.com
     namespace: dh-psi-monitoring
-    server: https://api.ocp.prod.psi.redhat.com:6443
   project: data-hub
   source:
     path: monitoring/psi-prod-cluster/overlays/prod
