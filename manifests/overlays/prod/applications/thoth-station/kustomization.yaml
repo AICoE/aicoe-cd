@@ -27,6 +27,7 @@ resources:
 - stage/stage-thoth-package-extract.yaml
 - stage/stage-thoth-package-releases.yaml
 - stage/stage-thoth-package-update.yaml
+- stage/stage-thoth-qeb-hwt.yaml
 - stage/stage-thoth-revsolver.yaml
 - stage/stage-thoth-security-indicators.yaml
 - stage/stage-thoth-slo-reporter.yaml
@@ -49,6 +50,7 @@ resources:
 - test/test-thoth-package-extract.yaml
 - test/test-thoth-package-releases.yaml
 - test/test-thoth-package-update.yaml
+- test/test-thoth-qeb-hwt.yaml
 - test/test-thoth-revsolver.yaml
 - test/test-thoth-security-indicators.yaml
 - test/test-thoth-slo-reporter.yaml
