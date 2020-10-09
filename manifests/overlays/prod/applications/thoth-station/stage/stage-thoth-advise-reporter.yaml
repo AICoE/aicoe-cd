@@ -2,12 +2,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: stage-thoth-slo-reporter
+  name: stage-thoth-advise-reporter
 spec:
   project: thoth
   source:
     repoURL: 'https://github.com/thoth-station/thoth-application.git'
-    path: slo-reporter/overlays/stage
+    path: advise-reporter/overlays/stage
     targetRevision: master
   destination:
     server: 'https://api.ocp.prod.psi.redhat.com:6443'
