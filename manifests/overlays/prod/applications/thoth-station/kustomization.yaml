@@ -10,6 +10,7 @@ resources:
 - stage/core-graph.yaml
 - stage/core-infra.yaml
 - stage/core-middletier.yaml
+- stage/stage-thoth-advise-reporter.yaml
 - stage/stage-thoth-adviser.yaml
 - stage/stage-thoth-amun-api.yaml
 - stage/stage-thoth-amun-inspection.yaml
