@@ -5,7 +5,7 @@ metadata:
 spec:
   destination:
     namespace: aiops-prod-argo
-    server: https://api.ocp.prod.psi.redhat.com:6443
+    server: https://api.ocp4.prod.psi.redhat.com:6443
   project: aiops
   source:
     path: manifests
