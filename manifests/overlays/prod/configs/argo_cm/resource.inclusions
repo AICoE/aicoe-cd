@@ -92,11 +92,11 @@
   - WorkflowTemplate
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
 - apiGroups:
   - argoproj.io
   kinds:
-  - Application
-  - AppProject
+  - WorkflowEventBinding
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
 - apiGroups:
@@ -365,14 +365,6 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
 - apiGroups:
-  - argoproj.io
-  kinds:
-  - CronWorkflow
-  - Workflow
-  - WorkflowTemplate
-  clusters:
-  - https://api.ocp4.prod.psi.redhat.com:6443
-- apiGroups:
   - extensions
   kinds:
   - Ingress
@@ -441,17 +433,5 @@
   kinds:
   - AirflowBase
   - AirflowCluster
-  clusters:
-  - https://paas.stage.psi.redhat.com:443
-- apiGroups:
-  - argoproj.io
-  kinds:
-  - CronWorkflow
-  - EventBus
-  - EventSource
-  - Gateway
-  - Sensor
-  - Workflow
-  - WorkflowTemplate
   clusters:
   - https://paas.stage.psi.redhat.com:443
