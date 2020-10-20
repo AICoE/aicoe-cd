@@ -7,7 +7,7 @@ spec:
   project: thoth
   source:
     repoURL: 'https://github.com/thoth-station/thoth-application.git'
-    path: amun/overlays/amun-inspection
+    path: amun/overlays/stage/amun-inspection
     targetRevision: HEAD
   destination:
     server: 'https://api.ocp.prod.psi.redhat.com:6443'

@@ -6,7 +6,7 @@ metadata:
 spec:
   project: thoth
   source:
-    path: core/overlays/infra-stage
+    path: core/overlays/stage/infra-stage
     repoURL: "https://github.com/thoth-station/thoth-application.git"
     targetRevision: master
   destination:
