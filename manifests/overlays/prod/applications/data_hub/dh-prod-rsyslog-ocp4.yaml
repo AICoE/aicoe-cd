@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dh-prod-rsyslog
+spec:
+  destination:
+    namespace: dh-prod-ingest
+    server: https://api.ocp4.prod.psi.redhat.com:6443
+  project: data-hub
+  source:
+    path: rsyslog/overlays/prod
+    repoURL: https://github.com/AICoE/internal-data-hub.git
+    targetRevision: master
+  syncPolicy:
+    syncOptions:
+    - Validate=false
