@@ -31,3 +31,9 @@ spec:
   syncPolicy:
     syncOptions:
     - Validate=false
+  ignoreDifferences:
+  - kind: Secret
+    name: default-ingress-cert
+    namespace: dh-psi-monitoring
+    jsonPointers:
+    - /metadata/labels
