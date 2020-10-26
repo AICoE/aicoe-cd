@@ -1,16 +1,33 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dh-psi-monitoring
+  name: prometheus-alertmanager.dh-psi-monitoring
 spec:
   destination:
     name: api.ocp4.prod.psi.redhat.com
     namespace: dh-psi-monitoring
   project: data-hub
   source:
-    path: monitoring/psi-prod-cluster/overlays/prod
-    repoURL: https://github.com/AICoE/idh-manifests.git
-    targetRevision: production
+    path: prometheus/overlays/prod/
+    repoURL: https://github.com/AICoE/internal-data-hub.git
+    targetRevision: master
+  syncPolicy:
+    syncOptions:
+    - Validate=false
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: grafana.dh-psi-monitoring
+spec:
+  destination:
+    name: api.ocp4.prod.psi.redhat.com
+    namespace: dh-psi-monitoring
+  project: data-hub
+  source:
+    path: grafana/prod/
+    repoURL: https://github.com/AICoE/internal-data-hub.git
+    targetRevision: master
   syncPolicy:
     syncOptions:
     - Validate=false
