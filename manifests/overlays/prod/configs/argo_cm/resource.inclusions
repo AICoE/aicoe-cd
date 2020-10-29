@@ -16,6 +16,7 @@
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
   - https://api.ocp4.prod.psi.redhat.com:6443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - triggers.tekton.dev
   kinds:
@@ -25,6 +26,7 @@
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
   - https://api.ocp4.prod.psi.redhat.com:6443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - ''
   kinds:
@@ -45,12 +47,14 @@
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - app.kiegroup.org
   kinds:
   - KieApp
   clusters:
   - https://api.ocp.prod.psi.redhat.com:6443
+  - https://api.ocp4.prod.psi.redhat.com:6443
 - apiGroups:
   - app.redislabs.com
   kinds:
@@ -78,6 +82,7 @@
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - argoproj.io
   kinds:
@@ -110,6 +115,7 @@
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - autoscaling
   kinds:
@@ -119,6 +125,7 @@
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - batch
   kinds:
@@ -129,6 +136,7 @@
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - build.openshift.io
   kinds:
@@ -139,6 +147,7 @@
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - charts.helm.k8s.io
   kinds:
@@ -168,6 +177,7 @@
   - https://api.ocp.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - image.openshift.io
   kinds:
@@ -179,6 +189,7 @@
   - https://api.ocp.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - integreatly.org
   kinds:
@@ -325,6 +336,7 @@
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - quota.openshift.io
   kinds:
@@ -334,6 +346,7 @@
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - rbac.authorization.k8s.io
   kinds:
@@ -344,6 +357,7 @@
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - route.openshift.io
   kinds:
@@ -353,6 +367,7 @@
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - template.openshift.io
   kinds:
@@ -364,6 +379,7 @@
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - extensions
   kinds:
@@ -387,6 +403,21 @@
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
 - apiGroups:
+  - logging.openshift.io
+  kinds:
+  - Elasticsearch
+  - Kibana
+  clusters:
+  - https://api.ocp4.prod.psi.redhat.com:6443
+- apiGroups:
+  - mongodb.com
+  kinds:
+  - MongoDB
+  - MongoDBUser
+  - MongoDBOpsManager
+  clusters:
+  - https://api.ocp4.prod.psi.redhat.com:6443
+- apiGroups:
   - apps
   kinds:
   - DaemonSet
@@ -395,6 +426,7 @@
   - StatefulSet
   clusters:
   - https://datahub.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - autoscaling.containers.ai
   kinds:
@@ -403,6 +435,7 @@
   clusters:
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - networking.k8s.io
   kinds:
@@ -410,6 +443,7 @@
   clusters:
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - opendatahub.io
   kinds:
@@ -417,6 +451,7 @@
   clusters:
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - servicecatalog.k8s.io
   kinds:
@@ -435,3 +470,32 @@
   - AirflowCluster
   clusters:
   - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - argoproj.io
+  kinds:
+  - CronWorkflow
+  - EventBus
+  - EventSource
+  - Gateway
+  - Sensor
+  - Workflow
+  - WorkflowTemplate
+  clusters:
+  - https://paas.stage.psi.redhat.com:443
+- apiGroups:
+  - argoproj.io
+  kinds:
+  - CronWorkflow
+  - Workflow
+  - WorkflowTemplate
+  clusters:
+  - https://k-openshift.osh.massopen.cloud:8443/
+- apiGroups:
+  - operators.coreos.com
+  kinds:
+  - CatalogSource
+  - ClusterServiceVersion
+  - InstallPlan
+  - Subscription
+  clusters:
+  - https://k-openshift.osh.massopen.cloud:8443/
