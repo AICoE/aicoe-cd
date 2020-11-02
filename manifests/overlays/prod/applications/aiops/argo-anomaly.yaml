@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ocp4-anomaly-detection
+spec:
+  destination:
+    namespace: aiops-prod-argo
+    server: https://api.ocp4.prod.psi.redhat.com:6443
+  project: aiops
+  source:
+    path: manifests
+    repoURL: https://github.com/martinpovolny/ocp4-anomaly-detection.git
+    targetRevision: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - Validate=false
