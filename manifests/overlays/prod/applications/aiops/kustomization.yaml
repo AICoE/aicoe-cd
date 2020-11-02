@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - argo-analytics.yaml
   - aiops-prod-argo.yaml
+  - argo-anomaly.yaml
