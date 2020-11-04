@@ -29,3 +29,4 @@ generators:
 patchesStrategicMerge:
 - serviceaccounts/argocd-dex-server.yaml
 - deployments/argocd-application-controller_patch.yaml
+- deployments/argocd-server_patch.yaml
