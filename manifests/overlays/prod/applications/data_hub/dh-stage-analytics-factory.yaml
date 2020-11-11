@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dh-stage-analytics-factory
+spec:
+  destination:
+    namespace: dh-stage-analytics-factory
+    server: 'https://paas.stage.psi.redhat.com:443'
+  project: data-hub
+  source:
+    path: data-catalog/overlays/stage
+    repoURL: https://github.com/AICoE/idh-manifests.git
+    targetRevision: production
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - Validate=false
