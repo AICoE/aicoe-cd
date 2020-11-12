@@ -20,6 +20,13 @@ p, role:thoth-admin, applications, sync, thoth/*, allow
 p, role:thoth-admin, applications, override, thoth/*, allow
 p, role:thoth-admin, applications, action/*, thoth/*, allow
 
+p, role:thoth-admin, applications, get, thoth-stage/*, allow
+p, role:thoth-admin, applications, update, thoth-stage/*, allow
+p, role:thoth-admin, applications, delete, thoth-stage/*, allow
+p, role:thoth-admin, applications, sync, thoth-stage/*, allow
+p, role:thoth-admin, applications, override, thoth-stage/*, allow
+p, role:thoth-admin, applications, action/*, thoth-stage/*, allow
+
 p, role:thoth-admin, applications, get, thoth-dev/*, allow
 p, role:thoth-admin, applications, create, thoth-dev/*, allow
 p, role:thoth-admin, applications, update, thoth-dev/*, allow
