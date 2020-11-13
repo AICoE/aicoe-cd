@@ -3,7 +3,7 @@ kind: ServiceMonitor
 metadata:
   labels:
     prometheus: dh-prometheus
-  name: ArgoCD-service-monitor
+  name: argocd-service-monitor
 spec:
   endpoints:
     - interval: 30s
