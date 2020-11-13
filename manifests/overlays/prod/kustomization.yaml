@@ -5,6 +5,7 @@ resources:
 - ../../base
 - projects
 - applications
+- monitoring
 configMapGenerator:
 - name: argocd-cm
   behavior: replace
