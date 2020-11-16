@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: stage-thoth-graph-sync-middletier
+  name: ocp4-stage-thoth-graph-sync-middletier
 spec:
   project: thoth-stage
   source:

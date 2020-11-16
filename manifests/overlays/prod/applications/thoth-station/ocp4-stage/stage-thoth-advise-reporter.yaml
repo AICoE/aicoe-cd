@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: stage-thoth-advise-reporter
+  name: ocp4-stage-thoth-advise-reporter
 spec:
   project: thoth-stage
   source:

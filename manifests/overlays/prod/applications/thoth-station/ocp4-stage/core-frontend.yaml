@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: stage-thoth-core-frontend
+  name: ocp4-stage-thoth-core-frontend
 spec:
   project: thoth-stage
   source:
