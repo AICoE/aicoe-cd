@@ -433,7 +433,6 @@
   - AlamedaRecommendation
   - AlamedaScaler
   clusters:
-  - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - networking.k8s.io
