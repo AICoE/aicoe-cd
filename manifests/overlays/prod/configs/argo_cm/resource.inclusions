@@ -6,6 +6,7 @@
   - https://api.thoth01.lab.upshift.rdu2.redhat.com:6443
   - https://api.thoth12.lab.upshift.rdu2.redhat.com:6443
   - https://api.ocp4.idh.dev.datahub.redhat.com:6443
+  - https://console.10.0.79.172.nip.io:8443
 - apiGroups:
   - tekton.dev
   kinds:
