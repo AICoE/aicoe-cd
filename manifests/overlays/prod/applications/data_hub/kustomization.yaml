@@ -10,6 +10,8 @@ resources:
 - dh-stage-rsyslog.yaml
 - dh-prod-rsyslog.yaml
 - dh-prod-rsyslog-ocp4.yaml
+- dh-stage-logsash.yaml
+- dh-prod-logstash.yaml
 - dh-stage-analytics-factory.yaml
 - dh-prod-analytics-factory.yaml
 - dh-prod-data-catalog-ccx.yaml
