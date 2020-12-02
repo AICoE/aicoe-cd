@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dh-stage-superset
+spec:
+  destination:
+    namespace: dh-stage-superset
+    server: 'https://paas.stage.psi.redhat.com:443'
+  project: data-hub
+  source:
+    path: superset
+    repoURL: https://github.com/AICoE/idh-manifests.git
+    targetRevision: production
+    plugin:
+      name: helmSecrets
+      env:
+        - name: VALUES_FILES
+          value: "-f secrets.enc.yaml -f helm_vars/stage/secrets.yaml -f helm_vars/stage/values.yaml"
+  syncPolicy:
+    syncOptions:
+      - Validate=false
