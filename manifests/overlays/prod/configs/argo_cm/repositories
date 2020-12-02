@@ -32,3 +32,5 @@
     key: token
 - type: git
   url: https://gitlab.cee.redhat.com/psilling/insights-rules-statistics.git
+  insecure: true
+  insecureIgnoreHostKey: true
