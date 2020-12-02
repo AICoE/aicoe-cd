@@ -59,3 +59,12 @@ p, role:aiops-admin, applications, override, aiops/*, allow
 p, role:aiops-admin, applications, action/*, aiops/*, allow
 g, aicoe-aiops-devops, role:argocd-template
 g, aicoe-aiops-devops, role:aiops-admin
+
+p, role:ccx-admin, applications, get, ccx/*, allow
+p, role:ccx-admin, applications, update, ccx/*, allow
+p, role:ccx-admin, applications, delete, ccx/*, allow
+p, role:ccx-admin, applications, sync, ccx/*, allow
+p, role:ccx-admin, applications, override, ccx/*, allow
+p, role:ccx-admin, applications, action/*, ccx/*, allow
+g, aicoe-ccx, role:argocd-template
+g, aicoe-ccx, role:ccx-admin
