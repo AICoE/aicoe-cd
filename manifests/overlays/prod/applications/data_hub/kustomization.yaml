@@ -17,3 +17,5 @@ resources:
 - dh-prod-data-catalog-ccx.yaml
 - dh-prod-data-catalog-usir.yaml
 - dh-prod-customer-journeys.yaml
+- dh-stage-superset.yaml
+- dh-prod-superset.yaml
