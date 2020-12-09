@@ -16,4 +16,4 @@ spec:
       prune: true
       selfHeal: true
     syncOptions:
-    - Validate=false
+      - Validate=false

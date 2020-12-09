@@ -13,4 +13,4 @@ spec:
     targetRevision: master
   syncPolicy:
     syncOptions:
-    - Validate=false
+      - Validate=false

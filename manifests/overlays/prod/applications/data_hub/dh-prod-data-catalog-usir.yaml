@@ -13,4 +13,4 @@ spec:
     targetRevision: production
   syncPolicy:
     syncOptions:
-    - Validate=false
+      - Validate=false
