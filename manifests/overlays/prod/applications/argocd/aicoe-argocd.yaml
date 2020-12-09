@@ -12,8 +12,5 @@ spec:
     repoURL: https://github.com/AICoE/aicoe-cd.git
     targetRevision: HEAD
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
     syncOptions:
     - Validate=false
