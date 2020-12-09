@@ -1,11 +1,13 @@
 # See the OWNERS docs at https://go.k8s.io/owners
 
 approvers:
+  - accorvin
   - anishasthana
+  - gmfrasca
   - HumairAK
-  - tumido
+  - maulikjs
+  - rimolive
   - sesheta
+  - tumido
 reviewers:
-  - durandom
   - harshad16
-  - hemajv
