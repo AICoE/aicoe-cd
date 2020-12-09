@@ -4,7 +4,7 @@ namespace: aicoe-argocd
 resources:
 - ../../base
 - projects
-- applications
+- applications/argocd
 - monitoring
 configMapGenerator:
 - name: argocd-cm
