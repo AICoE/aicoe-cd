@@ -32,3 +32,4 @@ patchesStrategicMerge:
 - deployments/argocd-application-controller_patch.yaml
 - deployments/argocd-server_patch.yaml
 - deployments/argocd-redis_patch.yaml
+- deployments/argocd-dex-server_patch.yaml
