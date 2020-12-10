@@ -7,7 +7,6 @@ resources:
 - dh-stage-jupyterhub.yaml
 - dh-stage-kafka.yaml
 - dh-stage-rsyslog.yaml
-- dh-prod-rsyslog.yaml
 - dh-prod-rsyslog-ocp4.yaml
 - dh-stage-logstash.yaml
 - dh-prod-logstash.yaml
