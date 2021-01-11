@@ -1,6 +1,6 @@
 ---
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 metadata:
   name: argocd-application-controller
 spec:
@@ -8,6 +8,7 @@ spec:
     spec:
       containers:
       - name: argocd-application-controller
+        image: quay.io/aicoe/argocd:v1.7.4-3
         resources:
           limits:
             memory: 8Gi

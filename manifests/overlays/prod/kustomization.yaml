@@ -28,4 +28,7 @@ generators:
 - secrets/clusters/secret-generator.yaml
 patchesStrategicMerge:
 - serviceaccounts/argocd-dex-server.yaml
-- statefulsets/argocd-application-controller_patch.yaml
+- deployments/argocd-application-controller_patch.yaml
+- deployments/argocd-server_patch.yaml
+- deployments/argocd-redis_patch.yaml
+- deployments/argocd-dex-server_patch.yaml
