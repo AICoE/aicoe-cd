@@ -1,4 +1,4 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- github.com/operate-first/continuous-deployment/manifests/crds?ref=v1.8.1-1
+- github.com/operate-first/continuous-deployment/manifests/crds?ref=v1.7.4-1
