@@ -14,6 +14,7 @@ resources:
 - stage-thoth-cve-update.yaml
 - stage-thoth-graph-backup.yaml
 - stage-thoth-graph-refresh.yaml
+- stage-thoth-graph-schema-update.yaml
 - stage-thoth-graph-sync-backend.yaml
 - stage-thoth-graph-sync-middletier.yaml
 - stage-thoth-investigator.yaml
