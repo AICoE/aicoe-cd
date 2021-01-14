@@ -5,12 +5,3 @@
   - "TaskRun"
   clusters:
   - "*"
-- apiGroups:
-  - "*"
-  kinds:
-  - CustomResourceDefinition
-  - ClusterRole
-  clusters:
-  - https://api.ocp.prod.psi.redhat.com:6443
-  - https://datahub.psi.redhat.com:443
-  - https://paas.stage.psi.redhat.com:443
