@@ -5,7 +5,7 @@ metadata:
 spec:
   destination:
     namespace: dh-stage-argo
-    server: https://datahub.psi.redhat.com:443
+    server: https://paas.stage.psi.redhat.com:443
   project: data-hub
   source:
     path: argo/overlays/dh-stage-argo
@@ -25,7 +25,7 @@ metadata:
 spec:
   destination:
     namespace: dh-stage-argo
-    server: https://datahub.psi.redhat.com:443
+    server: https://paas.stage.psi.redhat.com:443
   project: data-hub
   source:
     path: argo-events/overlays/dh-stage-argo
