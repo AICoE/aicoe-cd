@@ -34,3 +34,5 @@
   url: https://gitlab.cee.redhat.com/psilling/insights-rules-statistics.git
   insecure: true
   insecureIgnoreHostKey: true
+- type: git
+  url: https://github.com/aicoe-aiops/sync-pipelines.git

@@ -4,13 +4,13 @@ kind: Application
 metadata:
   name: test-thoth-core
 spec:
-  project: thoth
+  project: thoth-dev
   source:
     repoURL: 'https://github.com/thoth-station/thoth-application.git'
     path: core/overlays/test
     targetRevision: master
   destination:
-    server: 'https://api.ocp.prod.psi.redhat.com:6443'
+    server: 'https://api.ocp4.prod.psi.redhat.com:6443'
     namespace: thoth-test-core
   syncPolicy:
     automated: {}

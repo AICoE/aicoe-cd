@@ -16,3 +16,5 @@ resources:
 - dh-prod-data-catalog-usir.yaml
 - dh-stage-superset.yaml
 - dh-prod-superset.yaml
+- dh-stage-argo.yaml
+# - dh-prod-argo.yaml  # FIXME: Unlisted until dh-stage-argo verifies the migration success

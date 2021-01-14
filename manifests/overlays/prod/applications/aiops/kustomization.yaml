@@ -5,3 +5,4 @@ resources:
   - argo-analytics.yaml
   - aiops-prod-argo.yaml
   - argo-anomaly.yaml
+  - solgate.yaml
