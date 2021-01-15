@@ -4,10 +4,11 @@ kind: StatefulSet
 metadata:
   name: argocd-application-controller
 spec:
+  replicas: 4
   template:
     spec:
       containers:
       - name: argocd-application-controller
         resources:
           limits:
-            memory: 8Gi
+            memory: 2Gi
