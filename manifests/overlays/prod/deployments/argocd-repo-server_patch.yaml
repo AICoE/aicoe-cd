@@ -3,11 +3,21 @@ kind: Deployment
 metadata:
   name: argocd-repo-server
 spec:
-  replicas: 2
+  replicas: 4
   template:
     spec:
       containers:
         - name: argocd-repo-server
+          command:
+            - uid_entrypoint.sh
+            - argocd-repo-server
+            - '--redis'
+            - 'argocd-redis:6379'
+            - '--parallelismlimit'
+            - '3'
           env:
             - name: ARGOCD_EXEC_TIMEOUT
-              value: "300"
+              value: "600"
+          resources:
+            limits:
+              memory: 1Gi
