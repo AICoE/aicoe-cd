@@ -23,7 +23,7 @@
 - type: git
   url: https://github.com/thoth-station/thoth-application.git
 - type: git
-  url: https://github.com/martinpovolny/ocp4-anomaly-detection.git
+  url: https://github.com/aicoe-aiops/ocp4-anomaly-detection-internal.git
   usernameSecret:
     name: srcops
     key: username
