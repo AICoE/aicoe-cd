@@ -9,8 +9,8 @@ spec:
   project: aiops
   source:
     path: manifests
-    repoURL: https://github.com/martinpovolny/ocp4-anomaly-detection.git
-    targetRevision: argocd
+    repoURL: https://github.com/aicoe-aiops/ocp4-anomaly-detection-internal.git
+    targetRevision: master
   syncPolicy:
     automated:
       prune: true
