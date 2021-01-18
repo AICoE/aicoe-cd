@@ -8,6 +8,7 @@ resources:
 - test-thoth-chat-notification.yaml
 - test-thoth-cve-update.yaml
 - test-thoth-graph-backup.yaml
+- test-thoth-graph-schema-update.yaml
 - test-thoth-graph-refresh.yaml
 - test-thoth-graph-sync.yaml
 - test-thoth-investigator.yaml
