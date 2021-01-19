@@ -14,3 +14,9 @@ spec:
   syncPolicy:
     syncOptions:
     - Validate=false
+  ignoreDifferences:
+  - group: route.openshift.io/v1
+    kind: Route
+    name: jupyterhub
+    jsonPointers:
+    - /metadata/annotations
