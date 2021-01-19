@@ -32,8 +32,5 @@ spec:
     repoURL: https://github.com/AICoE/idh-manifests.git
     targetRevision: production
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
     syncOptions:
       - Validate=false
