@@ -9,6 +9,9 @@ spec:
     spec:
       containers:
       - name: argocd-application-controller
+        env:
+        - name: ARGOCD_CONTROLLER_REPLICAS
+          value: "4"
         resources:
           limits:
             memory: 2Gi
