@@ -16,3 +16,9 @@ spec:
     automated:
       prune: true
       selfHeal: true
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      name: argo-server
+      jsonPointers:
+        - /spec/template/spec/containers/0/image
