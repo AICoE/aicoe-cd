@@ -12,14 +12,5 @@ spec:
     repoURL: https://github.com/aicoe-aiops/ocp4-anomaly-detection-internal.git
     targetRevision: master
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
     syncOptions:
       - Validate=false
-  ignoreDifferences:
-    - group: batch
-      kind: CronJob
-      name: anomaly-detect-collector
-      jsonPointers:
-        - /spec/template/spec/containers/0/image
