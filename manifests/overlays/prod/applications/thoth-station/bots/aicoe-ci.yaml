@@ -7,10 +7,12 @@ spec:
   project: thoth
   source:
     repoURL: 'https://github.com/AICoE/aicoe-ci.git'
-    path: .
-    targetRevision: HEAD
+    path: manifests/overlays/ocp
+    targetRevision: master
   destination:
     server: 'https://api.ocp4.prod.psi.redhat.com:6443'
     namespace: aicoe-infra-prod
   syncPolicy:
     automated: {}
+    syncOptions:
+      - Validate=false
