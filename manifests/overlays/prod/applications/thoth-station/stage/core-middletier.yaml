@@ -16,3 +16,9 @@ spec:
     automated:
       prune: true
       selfHeal: true
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      name: workflow-controller
+      jsonPointers:
+        - /spec/template/spec/containers/0/image
