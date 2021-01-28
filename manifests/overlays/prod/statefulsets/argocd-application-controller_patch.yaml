@@ -4,14 +4,14 @@ kind: StatefulSet
 metadata:
   name: argocd-application-controller
 spec:
-  replicas: 4
+  replicas: 2
   template:
     spec:
       containers:
       - name: argocd-application-controller
         env:
         - name: ARGOCD_CONTROLLER_REPLICAS
-          value: "4"
+          value: "2"
         resources:
           limits:
-            memory: 2Gi
+            memory: 6Gi
