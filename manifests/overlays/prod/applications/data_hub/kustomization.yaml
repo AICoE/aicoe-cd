@@ -18,3 +18,4 @@ resources:
 - dh-prod-superset.yaml
 - dh-stage-argo.yaml
 - dh-prod-argo.yaml
+- dh-prod-thanos-extrator.yaml
