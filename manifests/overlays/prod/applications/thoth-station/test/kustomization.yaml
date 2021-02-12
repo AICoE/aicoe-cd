@@ -11,6 +11,7 @@ resources:
 - test-thoth-graph-schema-update.yaml
 - test-thoth-graph-refresh.yaml
 - test-thoth-graph-sync.yaml
+- test-thoth-integration-tests.yaml
 - test-thoth-investigator.yaml
 - test-thoth-kebechet.yaml
 - test-thoth-management-api.yaml

@@ -17,6 +17,7 @@ resources:
 - stage-thoth-graph-schema-update.yaml
 - stage-thoth-graph-sync-backend.yaml
 - stage-thoth-graph-sync-middletier.yaml
+- stage-thoth-integration-tests.yaml
 - stage-thoth-investigator.yaml
 - stage-thoth-kebechet.yaml
 - stage-thoth-management-api.yaml
