@@ -21,7 +21,7 @@ restart the application controller pod.
 
 This warning indicates that ArgoCD has encountered a resource that is not included as
 part of its discovery phase. This resource `kind` and `apigroup` must be added to
-the `resource.inclusions` list in [prod-vars.yaml](https://github.com/AICoE/aicoe-cd/blob/master/vars/prod-vars.yaml).
+the `resource.inclusions` list in [prod-vars.yaml](https://github.com/AICoE/aicoe-cd/blob/main/vars/prod-vars.yaml).
 
 ### SA Cannot list resource, no RBAC policy matched
 
