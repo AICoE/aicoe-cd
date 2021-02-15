@@ -10,7 +10,7 @@ spec:
   source:
     path: logstash/overlays/prod
     repoURL: https://github.com/AICoE/internal-data-hub.git
-    targetRevision: master
+    targetRevision: HEAD
   syncPolicy:
     syncOptions:
     - Validate=false

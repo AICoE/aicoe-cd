@@ -118,7 +118,7 @@ EOF
 ```
 
 ### 9. Create the kustomization.yaml
-[Read about kustomize plugins](https://github.com/kubernetes-sigs/kustomize/blob/master/docs/plugins/README.md)
+[Read about kustomize plugins](https://github.com/kubernetes-sigs/kustomize/blob/main/docs/plugins/README.md)
 
 ```bash
 cat <<EOF > kustomization.yaml
