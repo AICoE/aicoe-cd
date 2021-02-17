@@ -12,5 +12,5 @@ spec:
   destination:
     server: 'https://api.ocp4.prod.psi.redhat.com:6443'
     namespace: thoth-test-core
-  syncPolicy: {}
-  #   automated: {}
+  syncPolicy:
+    automated: {}
