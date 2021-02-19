@@ -14,20 +14,3 @@ spec:
   syncPolicy:
     syncOptions:
       - Validate=false
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: argo-events.dh-prod-thanos-extractor
-spec:
-  destination:
-    namespace: dh-prod-thanos-extractor
-    server: https://datahub.psi.redhat.com:443
-  project: data-hub
-  source:
-    path: argo-events/overlays/dh-prod-thanos-extractor
-    repoURL: https://github.com/AICoE/idh-manifests.git
-    targetRevision: production
-  syncPolicy:
-    syncOptions:
-      - Validate=false
