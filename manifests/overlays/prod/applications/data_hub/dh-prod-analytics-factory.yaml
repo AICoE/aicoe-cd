@@ -14,3 +14,19 @@ spec:
   syncPolicy:
     syncOptions:
     - Validate=false
+  ignoreDifferences:
+  - group: apps.openshift.io
+    kind: DeploymentConfig
+    name: hue-mysql
+    jsonPointers:
+    - /spec/template/spec/containers/0/image
+  - group: apps.openshift.io
+    kind: DeploymentConfig
+    name: thriftserver
+    jsonPointers:
+    - /spec/template/spec/initContainers/0/image
+  - group: apps.openshift.io
+    kind: DeploymentConfig
+    name: thriftserver-postgres
+    jsonPointers:
+    - /spec/template/spec/containers/1/image
