@@ -12,6 +12,9 @@ spec:
     repoURL: https://github.com/AICoE/internal-data-hub.git
     targetRevision: HEAD
   syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
     - Validate=false
 ---
@@ -29,5 +32,8 @@ spec:
     repoURL: https://github.com/AICoE/internal-data-hub.git
     targetRevision: HEAD
   syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
     - Validate=false
