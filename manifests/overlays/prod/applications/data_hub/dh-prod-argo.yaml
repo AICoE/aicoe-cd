@@ -12,8 +12,11 @@ spec:
     repoURL: https://github.com/AICoE/idh-manifests.git
     targetRevision: production
   syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
-      - Validate=false
+    - Validate=false
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -29,5 +32,8 @@ spec:
     repoURL: https://github.com/AICoE/idh-manifests.git
     targetRevision: production
   syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
-      - Validate=false
+    - Validate=false
