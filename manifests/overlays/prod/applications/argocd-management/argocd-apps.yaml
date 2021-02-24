@@ -1,19 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: aicoe-argocd
+  name: aicoe-argocd-apps
 spec:
   destination:
     name: api.ocp4.prod.psi.redhat.com
     namespace: aicoe-argocd
-  project: data-hub
+  project: argocd-management
   source:
-    path: manifests/overlays/prod
+    path: manifests/overlays/prod/applications
     repoURL: https://github.com/AICoE/aicoe-cd.git
     targetRevision: HEAD
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
     syncOptions:
-    - Validate=false
+      - Validate=false
