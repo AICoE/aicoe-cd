@@ -6,6 +6,10 @@ p, role:argocd-template, accounts, get, *, allow
 
 p, role:argocd-admin, applications, get, */*, allow
 p, role:argocd-admin, applications, sync, */*, allow
+p, role:argocd-admin, applications, update, argocd-management/*, allow
+p, role:argocd-admin, applications, delete, argocd-management/*, allow
+p, role:argocd-admin, applications, override, argocd-management/*, allow
+p, role:argocd-admin, applications, action/*, argocd-management/*, allow
 g, aicoe-argocd-admins, role:argocd-admin
 g, aicoe-argocd-admins, role:argocd-template
 g, data-hub-openshift-admins, role:argocd-admin

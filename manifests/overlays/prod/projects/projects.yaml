@@ -74,3 +74,14 @@ spec:
     server: '*'
   sourceRepos:
   - '*'
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: argocd-management
+spec:
+  destinations:
+  - namespace: '*'
+    server: '*'
+  sourceRepos:
+  - '*'
