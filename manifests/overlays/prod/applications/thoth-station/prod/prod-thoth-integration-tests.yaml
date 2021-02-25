@@ -1,0 +1,26 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prod-thoth-integration-tests
+spec:
+  project: thoth-stage
+  source:
+    repoURL: 'https://github.com/thoth-station/thoth-application.git'
+    path: integration-tests/overlays/cnv-prod-ocp4-stage
+    targetRevision: master
+  destination:
+    server: 'https://api.ocp4.prod.psi.redhat.com:6443'
+    namespace: thoth-frontend-stage
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+    - Validate=false
+  ignoreDifferences:
+  - group: batch
+    kind: CronJob
+    name: integration-tests
+    jsonPointers:
+    - /spec/jobTemplate/spec/template/spec/containers/0/image
