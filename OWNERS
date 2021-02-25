@@ -1,9 +1,22 @@
 # See the OWNERS docs at https://go.k8s.io/owners
 
 approvers:
+  - 4n4nd
   - accorvin
   - anishasthana
   - gmfrasca
+  - harshad16
+  - HumairAK
+  - maulikjs
+  - rimolive
+  - tumido
+
+reviewers:
+  - 4n4nd
+  - accorvin
+  - anishasthana
+  - gmfrasca
+  - harshad16
   - HumairAK
   - maulikjs
   - rimolive
