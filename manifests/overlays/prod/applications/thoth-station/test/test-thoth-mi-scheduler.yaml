@@ -14,3 +14,8 @@ spec:
     namespace: thoth-test-core
   syncPolicy:
     automated: {}
+  ignoreDifferences:
+    - group: batch
+      kind: CronJob
+      jsonPointers:
+        - /spec/jobTemplate/spec/template/spec/containers/0/image
