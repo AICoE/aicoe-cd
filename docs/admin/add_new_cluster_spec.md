@@ -49,7 +49,10 @@ Let's go over what some of the fields in the `stringData` field refer to:
 
 - `config`: The token goes here, replace the contents of ${SA_TOKEN} with the one retrieved earlier.
 
-- `namespace`: List of namespaces ArgoCD has permissions to deploy to, comma-separated, no whitespace
+- `namespace`: List of namespaces ArgoCD has permissions to deploy to, comma-separated, no whitespace. 
+
+**NOTE**: Every namespace listed in this field must have permissions for ArgoCD to manage the deployments.
+Refer to [this document](../give_argocd_access_to_your_project.md) to set up  permissions to the namespace.
 
 - `server`: Cluster api server hostname, can be retrieved by running `oc whoami --show-server`
 
