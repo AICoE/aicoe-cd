@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dh-stage-trino
+spec:
+  destination:
+    namespace: dh-stage-trino
+    server: https://api.rhods-idh.dev.datahub.redhat.com:6443
+  project: data-hub
+  source:
+    path: trino/overlays/stage
+    repoURL: https://github.com/AICoE/idh-manifests.git
+    targetRevision: production
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - Validate=false
