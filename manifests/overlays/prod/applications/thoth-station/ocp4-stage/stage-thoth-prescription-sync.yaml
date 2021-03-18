@@ -1,0 +1,23 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ocp4-stage-thoth-prescription-sync
+spec:
+  project: thoth-stage
+  source:
+    repoURL: 'https://github.com/thoth-station/thoth-application.git'
+    path: prescription-sync-job/overlays/ocp4-stage
+    targetRevision: master
+  destination:
+    server: 'https://api.ocp4.prod.psi.redhat.com:6443'
+    namespace: thoth-backend-stage
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+  ignoreDifferences:
+    - group: batch
+      kind: CronJob
+      jsonPointers:
+        - /spec/jobTemplate/spec/template/spec/containers/0/image

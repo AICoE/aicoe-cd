@@ -1,0 +1,21 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test-thoth-prescription-sync
+spec:
+  project: thoth-dev
+  source:
+    repoURL: 'https://github.com/thoth-station/thoth-application.git'
+    path: prescription-sync-job/overlays/test
+    targetRevision: master
+  destination:
+    server: 'https://api.ocp4.prod.psi.redhat.com:6443'
+    namespace: thoth-test-core
+  syncPolicy:
+    automated: {}
+  ignoreDifferences:
+    - group: batch
+      kind: CronJob
+      jsonPointers:
+        - /spec/jobTemplate/spec/template/spec/containers/0/image
