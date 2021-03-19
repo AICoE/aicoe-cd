@@ -19,3 +19,5 @@ resources:
 - dh-stage-argo.yaml
 - dh-prod-argo.yaml
 - dh-prod-thanos-extractor.yaml
+- dh-stage-rhods-catalog.yaml
+- dh-stage-rhods-objects.yaml

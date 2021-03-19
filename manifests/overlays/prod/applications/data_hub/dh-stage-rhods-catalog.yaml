@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dh-stage-rhods-catalog
+spec:
+  destination:
+    namespace: openshift-marketplace
+    server: https://api.rhods-idh.dev.datahub.redhat.com:6443
+  project: data-hub
+  source:
+    path: catalog-source/overlays/stage
+    repoURL: https://gitlab.cee.redhat.com/data-hub/dh-rhods-installation.git
+    targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+      - Validate=false
+    automated: null
