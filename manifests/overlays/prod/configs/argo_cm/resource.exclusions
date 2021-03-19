@@ -1,5 +1,7 @@
 - apiGroups:
   - "tekton.dev"
+  - "podtemplates"
+  - "cloudcredential.openshift.io"
   kinds:
   - "PipelineRun"
   - "TaskRun"
