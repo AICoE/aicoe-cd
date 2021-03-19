@@ -25,6 +25,7 @@ resources:
 - stage-thoth-package-extract.yaml
 - stage-thoth-package-releases.yaml
 - stage-thoth-package-update.yaml
+- stage-thoth-prescription-sync.yaml
 - stage-thoth-qeb-hwt.yaml
 - stage-thoth-revsolver.yaml
 - stage-thoth-security-indicators.yaml
