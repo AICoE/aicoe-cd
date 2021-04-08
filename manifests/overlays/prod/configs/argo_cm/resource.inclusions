@@ -6,7 +6,6 @@
   - https://api.thoth01.lab.upshift.rdu2.redhat.com:6443
   - https://api.thoth12.lab.upshift.rdu2.redhat.com:6443
   - https://api.ocp4.idh.dev.datahub.redhat.com:6443
-  - https://api.rhods-idh.dev.datahub.redhat.com:6443
   - https://console.10.0.79.172.nip.io:8443
 - apiGroups:
   - tekton.dev
@@ -50,6 +49,7 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - app.kiegroup.org
   kinds:
@@ -75,6 +75,7 @@
   - https://api.ocp.prod.psi.redhat.com:6443
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - apps.openshift.io
   kinds:
@@ -139,6 +140,7 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - build.openshift.io
   kinds:
@@ -370,6 +372,7 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - template.openshift.io
   kinds:
@@ -404,6 +407,7 @@
   - ImageTag
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - logging.openshift.io
   kinds:
@@ -452,6 +456,7 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - servicecatalog.k8s.io
   kinds:
@@ -499,3 +504,4 @@
   - Subscription
   clusters:
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
