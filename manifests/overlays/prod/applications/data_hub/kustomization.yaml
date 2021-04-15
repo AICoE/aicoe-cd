@@ -21,3 +21,5 @@ resources:
 - dh-prod-thanos-extractor.yaml
 - dh-stage-rhods-catalog.yaml
 - dh-stage-rhods-objects.yaml
+- dh-stage-trino.yaml
+- dh-prod-trino.yaml
