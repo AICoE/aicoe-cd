@@ -1,4 +1,5 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- github.com/operate-first/continuous-deployment/manifests/crds?ref=v1.8.1-1
+- https://raw.githubusercontent.com/operate-first/apps/99abeee25ec921c961309f945a8f081856d5b717/cluster-scope/base/crds/applications.argoproj.io/crd.yaml
+- https://raw.githubusercontent.com/operate-first/apps/99abeee25ec921c961309f945a8f081856d5b717/cluster-scope/base/crds/appprojects.argoproj.io/crd.yaml
