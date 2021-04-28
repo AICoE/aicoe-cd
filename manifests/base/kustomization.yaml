@@ -1,4 +1,4 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- github.com/operate-first/continuous-deployment/manifests/base?ref=v1.8.1-1
+- github.com/operate-first/apps/argocd/base?ref=999d2cacb8efe9f06c6018ae0461d0fda3724d6b
