@@ -26,7 +26,7 @@ spec:
   destination:
     namespace: dh-prod-argo
     server: https://datahub.psi.redhat.com:443
-project: data-hub
+  project: data-hub
   source:
     path: argo-workflows/overlays/prod
     repoURL: https://github.com/AICoE/internal-data-hub.git
