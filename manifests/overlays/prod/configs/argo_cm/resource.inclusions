@@ -233,6 +233,7 @@
   - Subscription
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - packages.operators.coreos.com
   kinds:
@@ -408,4 +409,3 @@
   - Subscription
   clusters:
   - https://k-openshift.osh.massopen.cloud:8443/
-  - https://api.rhods-idh.dev.datahub.redhat.com:6443
