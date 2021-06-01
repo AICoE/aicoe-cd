@@ -383,10 +383,6 @@
   - argoproj.io
   kinds:
   - CronWorkflow
-  - EventBus
-  - EventSource
-  - Gateway
-  - Sensor
   - Workflow
   - WorkflowTemplate
   clusters:
