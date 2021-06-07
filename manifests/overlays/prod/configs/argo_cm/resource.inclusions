@@ -79,6 +79,7 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - argoproj.io
   kinds:
@@ -111,6 +112,7 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - autoscaling
   kinds:
@@ -120,6 +122,7 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - batch
   kinds:
@@ -141,6 +144,7 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - charts.helm.k8s.io
   kinds:
@@ -159,6 +163,7 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - image.openshift.io
   kinds:
@@ -170,6 +175,7 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - integreatly.org
   kinds:
@@ -194,6 +200,7 @@
   clusters:
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - machinelearning.seldon.io
   kinds:
@@ -249,6 +256,7 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - quota.openshift.io
   kinds:
@@ -258,6 +266,7 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - rbac.authorization.k8s.io
   kinds:
@@ -268,6 +277,7 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - route.openshift.io
   kinds:
@@ -289,6 +299,7 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - extensions
   kinds:
@@ -352,6 +363,7 @@
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - opendatahub.io
   kinds:
@@ -372,6 +384,7 @@
   clusters:
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - airflow.apache.org
   kinds:
@@ -379,6 +392,7 @@
   - AirflowCluster
   clusters:
   - https://paas.stage.psi.redhat.com:443
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - argoproj.io
   kinds:
@@ -388,6 +402,7 @@
   clusters:
   - https://datahub.psi.redhat.com:443
   - https://paas.stage.psi.redhat.com:443
+  - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
   - argoproj.io
   kinds:
