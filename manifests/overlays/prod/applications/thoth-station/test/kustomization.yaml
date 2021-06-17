@@ -20,7 +20,6 @@ resources:
 - test-thoth-package-extract.yaml
 - test-thoth-package-releases.yaml
 - test-thoth-package-update.yaml
-- test-thoth-prescription-sync.yaml
 - test-thoth-purge-job.yaml
 - test-thoth-qeb-hwt.yaml
 - test-thoth-revsolver.yaml
