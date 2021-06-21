@@ -13,6 +13,7 @@ resources:
 - stage-thoth-chat-notification.yaml
 - stage-thoth-cve-update.yaml
 - stage-thoth-graph-backup.yaml
+- stage-thoth-graph-metrics-exporter.yaml
 - stage-thoth-graph-refresh.yaml
 - stage-thoth-graph-schema-update.yaml
 - stage-thoth-graph-sync-backend.yaml
