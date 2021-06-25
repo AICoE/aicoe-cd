@@ -8,7 +8,7 @@ spec:
     server: https://api.rhods-idh.dev.datahub.redhat.com:6443
   project: data-hub
   source:
-    path: kfdefs/overlays/prod/stage/dh-stage-trino
+    path: kfdefs/overlays/stage/dh-stage-trino
     repoURL: https://github.com/AICoE/internal-data-hub.git
     targetRevision: main
   syncPolicy:
