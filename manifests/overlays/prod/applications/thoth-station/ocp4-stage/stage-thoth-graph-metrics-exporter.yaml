@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ocp4-stage-thoth-metrics-exporter
+  name: ocp4-stage-thoth-graph-metrics-exporter
 spec:
   project: thoth-stage
   source:
