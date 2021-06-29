@@ -8,9 +8,9 @@ spec:
     server: https://api.ocp4.prod.psi.redhat.com:6443
   project: data-hub
   source:
-    path: trino/overlays/prod
-    repoURL: https://github.com/AICoE/idh-manifests.git
-    targetRevision: production
+    path: kfdefs/overlays/prod/dh-prod-trino
+    repoURL: https://github.com/AICoE/internal-data-hub.git
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
