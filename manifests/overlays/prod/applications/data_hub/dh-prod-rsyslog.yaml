@@ -10,7 +10,7 @@ spec:
   source:
     path: rsyslog/overlays/prod
     repoURL: https://github.com/AICoE/internal-data-hub.git
-    targetRevision: HEAD
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
