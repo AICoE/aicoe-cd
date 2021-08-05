@@ -8,14 +8,9 @@ spec:
     server: 'https://paas.stage.psi.redhat.com:443'
   project: data-hub
   source:
-    path: superset
-    repoURL: https://github.com/AICoE/idh-manifests.git
-    targetRevision: production
-    plugin:
-      name: helmSecrets
-      env:
-        - name: VALUES_FILES
-          value: "-f secrets.enc.yaml -f helm_vars/stage/secrets.yaml -f helm_vars/stage/values.yaml"
+    path: kfdefs/overlays/prod/dh-stage-trino
+    repoURL: https://github.com/AICoE/internal-data-hub.git
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
