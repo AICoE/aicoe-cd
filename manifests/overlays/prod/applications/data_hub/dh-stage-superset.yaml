@@ -8,7 +8,7 @@ spec:
     server: 'https://paas.stage.psi.redhat.com:443'
   project: data-hub
   source:
-    path: kfdefs/overlays/stage/dh-stage-trino
+    path: kfdefs/overlays/stage/dh-stage-superset
     repoURL: https://github.com/AICoE/internal-data-hub.git
     targetRevision: main
   syncPolicy:
