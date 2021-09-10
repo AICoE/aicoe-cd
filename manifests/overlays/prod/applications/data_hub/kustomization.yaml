@@ -13,7 +13,6 @@ resources:
 - dh-stage-analytics-factory.yaml
 - dh-prod-analytics-factory.yaml
 - dh-prod-data-catalog-ccx.yaml
-- dh-prod-data-catalog-usir.yaml
 - dh-stage-superset.yaml
 - dh-prod-superset.yaml
 - dh-stage-argo.yaml
