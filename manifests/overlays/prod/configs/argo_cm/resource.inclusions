@@ -44,6 +44,7 @@
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.rhods-idh.dev.datahub.redhat.com:6443
@@ -77,6 +78,7 @@
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.rhods-idh.dev.datahub.redhat.com:6443
@@ -110,6 +112,7 @@
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.rhods-idh.dev.datahub.redhat.com:6443
@@ -120,6 +123,7 @@
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.rhods-idh.dev.datahub.redhat.com:6443
@@ -131,6 +135,7 @@
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.rhods-idh.dev.datahub.redhat.com:6443
@@ -142,6 +147,7 @@
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.rhods-idh.dev.datahub.redhat.com:6443
@@ -161,6 +167,7 @@
   - ReplicaSet
   clusters:
   - https://datahub.psi.redhat.com:443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.rhods-idh.dev.datahub.redhat.com:6443
@@ -173,6 +180,7 @@
   - ImageStreamTag
   clusters:
   - https://datahub.psi.redhat.com:443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.rhods-idh.dev.datahub.redhat.com:6443
@@ -199,6 +207,7 @@
   - KafkaUser
   clusters:
   - https://datahub.psi.redhat.com:443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
   - https://api.rhods-idh.dev.datahub.redhat.com:6443
 - apiGroups:
@@ -254,6 +263,7 @@
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.rhods-idh.dev.datahub.redhat.com:6443
@@ -264,6 +274,7 @@
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.rhods-idh.dev.datahub.redhat.com:6443
@@ -275,6 +286,7 @@
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.rhods-idh.dev.datahub.redhat.com:6443
@@ -285,6 +297,7 @@
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.rhods-idh.dev.datahub.redhat.com:6443
@@ -297,6 +310,7 @@
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.rhods-idh.dev.datahub.redhat.com:6443
@@ -347,6 +361,7 @@
   - StatefulSet
   clusters:
   - https://datahub.psi.redhat.com:443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
   - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - autoscaling.containers.ai
@@ -361,6 +376,7 @@
   - NetworkPolicy
   clusters:
   - https://datahub.psi.redhat.com:443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
   - https://paas.stage.psi.redhat.com:443
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.rhods-idh.dev.datahub.redhat.com:6443
