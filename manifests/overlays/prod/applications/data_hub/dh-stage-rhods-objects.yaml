@@ -8,8 +8,8 @@ spec:
     server: https://api.rhods-idh.dev.datahub.redhat.com:6443
   project: data-hub
   source:
-    path: rhods/overlays/stage
-    repoURL: https://gitlab.cee.redhat.com/data-hub/dh-rhods-installation.git
+    path: rhods/rhods/overlays/stage
+    repoURL: https://github.com/AICoE/internal-data-hub.git
     targetRevision: HEAD
   syncPolicy:
     syncOptions:
