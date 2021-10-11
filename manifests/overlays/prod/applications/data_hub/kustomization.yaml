@@ -30,3 +30,4 @@ resources:
 - redhat-ods-applications.yaml
 - redhat-ods-monitoring.yaml
 - redhat-ods-operator.yaml
+- dh-stage-telemetry-grafana.yaml
