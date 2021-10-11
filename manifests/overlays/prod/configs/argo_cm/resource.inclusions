@@ -436,3 +436,4 @@
   - Subscription
   clusters:
   - https://k-openshift.osh.massopen.cloud:8443/
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
