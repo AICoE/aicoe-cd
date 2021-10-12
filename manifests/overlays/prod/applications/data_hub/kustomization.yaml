@@ -31,3 +31,5 @@ resources:
 - redhat-ods-monitoring.yaml
 - redhat-ods-operator.yaml
 - dh-stage-telemetry-grafana.yaml
+- dh-sandbox-telemetry-grafana.yaml
+- dh-prod-telemetry-grafana.yaml
