@@ -2,14 +2,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dh-stage-telemetry-grafana
+  name: dh-prod-telemetry-grafana
 spec:
   destination:
-    namespace: dh-stage-telemetry-grafana
-    server: https://api.rhods-idh.dev.datahub.redhat.com:6443
+    namespace: dh-prod-telemetry-grafana
+    server: https://api.datahub-ocp4.prod.psi.redhat.com:6443
   project: data-hub
   source:
-    path: telemetry-grafana/overlays/stage
+    path: telemetry-grafana/overlays/prod
     repoURL: https://github.com/AICoE/internal-data-hub.git
     targetRevision: HEAD
   syncPolicy:
@@ -22,14 +22,14 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: telemetry-dashboards-stage
+  name: telemetry-dashboards-prod
 spec:
   destination:
-    namespace: dh-stage-telemetry-grafana
+    namespace: dh-prod-telemetry-grafana
     server: https://api.rhods-idh.dev.datahub.redhat.com:6443
   project: data-hub
   source:
-    path: overlays/stage
+    path: overlays/prod
     repoURL: https://gitlab.cee.redhat.com/data-hub/telemeter-ocp-dashboards.git
     targetRevision: HEAD
   syncPolicy:
