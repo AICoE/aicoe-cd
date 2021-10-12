@@ -40,3 +40,7 @@
   url: https://gitlab.cee.redhat.com/data-hub/dh-rhods-installation.git
   insecure: true
   insecureIgnoreHostKey: true
+- type: git
+  url: https://gitlab.cee.redhat.com/data-hub/telemeter-ocp-dashboards.git
+  insecure: true
+  insecureIgnoreHostKey: true
