@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dh-prod-obslytics
+spec:
+  destination:
+    namespace: dh-prod-thanos-extractor
+    server: https://api.datahub-ocp4.prod.psi.redhat.com:6443
+  project: data-hub
+  source:
+    path: obslytics/overlays/ocp4-migration
+    repoURL: https://github.com/AICoE/internal-data-hub.git
+    targetRevision: main
