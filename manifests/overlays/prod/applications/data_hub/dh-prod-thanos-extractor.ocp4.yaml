@@ -30,7 +30,7 @@ spec:
     server: https://api.datahub-ocp4.prod.psi.redhat.com:6443
   project: data-hub
   source:
-    path: argo/overlays/dh-prod-thanos-extractor
+    path: argo/overlays/ocp4.dh-prod-thanos-extractor
     repoURL: https://github.com/AICoE/idh-manifests.git
     targetRevision: production
   syncPolicy:
