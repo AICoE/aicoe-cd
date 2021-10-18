@@ -33,3 +33,4 @@ resources:
 - dh-stage-telemetry-grafana.yaml
 - dh-sandbox-telemetry-grafana.yaml
 - dh-prod-telemetry-grafana.yaml
+- dh-prod-obslytics.ocp4.yaml
