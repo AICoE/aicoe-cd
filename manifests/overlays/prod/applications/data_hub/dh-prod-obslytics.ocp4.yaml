@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dh-prod-obslytics
+  name: dh-prod-obslytics.ocp4
 spec:
   destination:
     namespace: dh-prod-thanos-extractor
