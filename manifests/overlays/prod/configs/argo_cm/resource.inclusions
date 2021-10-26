@@ -285,6 +285,7 @@
   kinds:
   - RoleBinding
   - Role
+  - ClusterRoleBinding
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://datahub.psi.redhat.com:443
@@ -440,10 +441,3 @@
   clusters:
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.datahub-ocp4.prod.psi.redhat.com:6443
-- apiGroups:
-  - rbac.authorication.k8s.io
-  kinds:
-  - ClusterRoleBinding
-  clusters:
-  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
-  - https://api.rhods-idh.dev.datahub.redhat.com:6443
