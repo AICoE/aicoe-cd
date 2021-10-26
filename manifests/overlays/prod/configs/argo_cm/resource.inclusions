@@ -232,6 +232,13 @@
   - ServiceMonitor
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
+- apiGroups:
+  - monitoring.coreos.com
+  kinds:
+  - PodMonitor
+  - PrometheusRule
+  - ServiceMonitor
+  clusters:
   - https://api.rhods-idh.dev.datahub.redhat.com:6443
   - https://api.datahub-ocp4.prod.psi.redhat.com:6443
 - apiGroups:
