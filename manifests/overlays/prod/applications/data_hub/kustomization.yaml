@@ -8,8 +8,6 @@ resources:
 - dh-stage-kafka.yaml
 - dh-stage-rsyslog.yaml
 - dh-prod-rsyslog.yaml
-- dh-stage-logstash.yaml
-- dh-prod-logstash.yaml
 - dh-stage-analytics-factory.yaml
 - dh-prod-analytics-factory.yaml
 - dh-prod-data-catalog-ccx.yaml
