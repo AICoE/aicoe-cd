@@ -16,8 +16,6 @@ resources:
 - dh-stage-argo.yaml
 - dh-prod-argo.yaml
 - dh-prod-thanos-extractor.yaml
-- dh-stage-rhods-catalog.yaml
-- dh-stage-rhods-objects.yaml
 - dh-stage-trino.yaml
 - dh-prod-trino.yaml
 - dh-prod-obslytics.yaml
@@ -26,8 +24,11 @@ resources:
 - dh-prod-argo.ocp4.yaml
 - dh-prod-thanos-extractor.ocp4.yaml
 - redhat-ods-applications.yaml
+- redhat-ods-applications-stage.yaml
 - redhat-ods-monitoring.yaml
+- redhat-ods-monitoring-stage.yaml
 - redhat-ods-operator.yaml
+- redhat-ods-operator-stage.yaml
 - dh-stage-telemetry-grafana.yaml
 - dh-sandbox-telemetry-grafana.yaml
 - dh-prod-telemetry-grafana.yaml
