@@ -11,3 +11,9 @@ spec:
     path: obslytics/overlays/prod
     repoURL: https://github.com/AICoE/internal-data-hub.git
     targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - Validate=false
