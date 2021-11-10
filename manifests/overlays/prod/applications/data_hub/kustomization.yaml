@@ -34,3 +34,5 @@ resources:
 - dh-prod-telemetry-grafana.yaml
 - dh-prod-obslytics.ocp4.yaml
 - dh-prod-trino.ocp4.yaml
+- dh-prod-docs.yaml
+- dh-stage-docs.yaml
