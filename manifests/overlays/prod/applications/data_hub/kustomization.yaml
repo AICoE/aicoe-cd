@@ -17,7 +17,6 @@ resources:
 - dh-prod-argo.yaml
 - dh-stage-trino.yaml
 - dh-prod-trino.yaml
-- dh-prod-obslytics.yaml
 
 # OCP4
 - dh-prod-argo.ocp4.yaml
