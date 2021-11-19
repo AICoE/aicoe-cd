@@ -4,16 +4,12 @@ resources:
 - dh-prod-jupyterhub.yaml
 - dh-psi-monitoring.yaml
 - dh-prod-kafka.yaml
-- dh-stage-jupyterhub.yaml
 - dh-stage-kafka.yaml
-- dh-stage-rsyslog.yaml
 - dh-prod-rsyslog.yaml
-- dh-stage-analytics-factory.yaml
 - dh-prod-analytics-factory.yaml
 - dh-prod-data-catalog-ccx.yaml
 - dh-stage-superset.yaml
 - dh-prod-superset.yaml
-- dh-stage-argo.yaml
 - dh-prod-argo.yaml
 - dh-stage-trino.yaml
 
