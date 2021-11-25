@@ -18,6 +18,8 @@ spec:
           env:
             - name: ARGOCD_EXEC_TIMEOUT
               value: "600"
+            - name: HELM_PLUGINS
+              value: /home/argocd/.local/share/helm/plugins
           resources:
             limits:
               memory: 1Gi
