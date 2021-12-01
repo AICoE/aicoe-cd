@@ -30,3 +30,4 @@ resources:
 - dh-prod-docs.yaml
 - dh-stage-docs.yaml
 - dh-prod-monitoring.yaml
+- dh-prod-superset.ocp4.yaml
