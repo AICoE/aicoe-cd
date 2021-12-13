@@ -30,3 +30,4 @@ patchesStrategicMerge:
 - serviceaccounts/argocd-dex-server.yaml
 - statefulsets/argocd-application-controller_patch.yaml
 - deployments/argocd-repo-server_patch.yaml
+- deployments/argocd-redis_patch.yaml
