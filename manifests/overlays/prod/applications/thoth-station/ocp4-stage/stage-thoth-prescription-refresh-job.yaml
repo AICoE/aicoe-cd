@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: stage-thoth-prescriptions-refresh-job
+  name: ocp4-stage-thoth-prescriptions-refresh-job
 spec:
   project: thoth-stage
   source:
