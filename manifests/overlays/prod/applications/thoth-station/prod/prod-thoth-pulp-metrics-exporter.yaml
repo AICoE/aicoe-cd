@@ -1,0 +1,20 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prod-thoth-pulp-metrics-exporter
+spec:
+  project: thoth-stage
+  source:
+    repoURL: 'https://github.com/thoth-station/thoth-application.git'
+    path: pulp-metrics-exporter/overlays/ocp4-stage
+    targetRevision: master
+  destination:
+    server: 'https://api.ocp4.prod.psi.redhat.com:6443'
+    namespace: thoth-infra-stage
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+    - Validate=false

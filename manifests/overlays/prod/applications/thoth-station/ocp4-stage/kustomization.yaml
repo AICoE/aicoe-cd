@@ -26,7 +26,8 @@ resources:
 - stage-thoth-package-extract.yaml
 - stage-thoth-package-releases.yaml
 - stage-thoth-package-update.yaml
-- stage-thoth-prescription-refresh-job.yaml
+- stage-thoth-prescriptions-refresh-job.yaml
+- stage-thoth-pulp-pypi-sync-job.yaml
 - stage-thoth-purge-job.yaml
 - stage-thoth-revsolver.yaml
 - stage-thoth-security-indicators.yaml
