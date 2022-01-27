@@ -9,8 +9,8 @@ resources:
 - test-thoth-cve-update.yaml
 - test-thoth-graph-backup.yaml
 - test-thoth-graph-metrics-exporter.yaml
-- test-thoth-graph-schema-update.yaml
 - test-thoth-graph-refresh.yaml
+- test-thoth-graph-schema-update.yaml
 - test-thoth-graph-sync.yaml
 - test-thoth-integration-tests.yaml
 - test-thoth-investigator.yaml
@@ -21,6 +21,8 @@ resources:
 - test-thoth-package-extract.yaml
 - test-thoth-package-releases.yaml
 - test-thoth-package-update.yaml
+- test-thoth-prescriptions-refresh-job.yaml
+- test-thoth-pulp-pypi-sync-job.yaml
 - test-thoth-purge-job.yaml
 - test-thoth-revsolver.yaml
 - test-thoth-security-indicators.yaml
