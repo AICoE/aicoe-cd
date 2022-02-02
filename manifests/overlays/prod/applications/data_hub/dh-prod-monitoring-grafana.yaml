@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dh-prod-monitoring-grafana
+spec:
+  destination:
+    namespace: dh-prod-monitoring
+    server: https://api.datahub-ocp4.prod.psi.redhat.com:6443
+  project: data-hub-dev
+  source:
+    path: grafana/overlays/prod
+    repoURL: https://github.com/AICoE/internal-data-hub.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - Validate=false
