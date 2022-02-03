@@ -202,6 +202,7 @@
   - Grafana
   clusters:
   - https://api.ocp4.prod.psi.redhat.com:6443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
 - apiGroups:
   - kafka.strimzi.io
   kinds:
