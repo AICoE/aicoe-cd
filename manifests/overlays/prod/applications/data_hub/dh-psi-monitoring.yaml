@@ -17,23 +17,3 @@ spec:
       selfHeal: true
     syncOptions:
     - Validate=false
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: grafana.dh-psi-monitoring
-spec:
-  destination:
-    name: api.ocp4.prod.psi.redhat.com
-    namespace: dh-psi-monitoring
-  project: data-hub
-  source:
-    path: grafana/prod/
-    repoURL: https://github.com/AICoE/internal-data-hub.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-    - Validate=false
