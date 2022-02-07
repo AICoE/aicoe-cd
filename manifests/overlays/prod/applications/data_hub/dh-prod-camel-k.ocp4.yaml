@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dh-prod-monitoring-grafana
+  name: ocp4.dh-prod-camel-k
 spec:
   destination:
-    namespace: dh-prod-monitoring
+    namespace: dh-prod-camel-k
     server: https://api.datahub-ocp4.prod.psi.redhat.com:6443
   project: data-hub
   source:
-    path: grafana/overlays/prod
+    path: camelk/overlays/prod/dh-prod-camel-k
     repoURL: https://github.com/AICoE/internal-data-hub.git
     targetRevision: main
   syncPolicy:
@@ -16,4 +16,4 @@ spec:
       prune: true
       selfHeal: true
     syncOptions:
-    - Validate=false
+      - Validate=false
