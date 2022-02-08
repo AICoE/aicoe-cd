@@ -18,3 +18,5 @@ spec:
           value: "-f secrets.enc.yaml -f helm_vars/stage/secrets.yaml -f helm_vars/stage/values.yaml"
   syncPolicy:
     automated: {}
+    syncOptions:
+      - Validate=false
