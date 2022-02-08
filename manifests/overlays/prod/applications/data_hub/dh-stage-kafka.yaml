@@ -8,14 +8,9 @@ spec:
     server:  'https://api.idh-stage.dev.datahub.redhat.com:6443'
   project: data-hub
   source:
-    path: kafka
-    repoURL: https://github.com/AICoE/idh-manifests.git
-    targetRevision: production
-    plugin:
-      name: helmSecrets
-      env:
-        - name: VALUES_FILES
-          value: "-f secrets.enc.yaml -f helm_vars/stage/secrets.yaml -f helm_vars/stage/values.yaml"
+    path: kfdefs/overlays/stage/dh-stage-message-bus
+    repoURL: https://github.com/AICoE/internal-data-hub.git
+    targetRevision: main
   syncPolicy:
     automated: {}
     syncOptions:
