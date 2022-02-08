@@ -473,3 +473,16 @@
   clusters:
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.datahub-ocp4.prod.psi.redhat.com:6443
+- apiGroups:
+  - camel.apache.org
+  kinds:
+  - Build
+  - CamelCatalog
+  - Integration
+  - IntegrationKit
+  - IntegrationPlatform
+  - Kamelet
+  - KameletBinding
+  clusters:
+  - https://api.idh-stage.dev.datahub.redhat.com:6443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
