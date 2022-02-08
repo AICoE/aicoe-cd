@@ -17,8 +17,4 @@ spec:
         - name: VALUES_FILES
           value: "-f secrets.enc.yaml -f helm_vars/prod/secrets.yaml -f helm_vars/prod/values.yaml"
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - Validate=false
+    automated: {}
