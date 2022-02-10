@@ -39,3 +39,24 @@ spec:
       selfHeal: true
     syncOptions:
     - Validate=false
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo-workflows.ocp4.dh-prod-argo
+spec:
+  destination:
+    namespace: dh-prod-argo
+    server: https://api.datahub-ocp4.prod.psi.redhat.com:6443
+  project: data-hub
+  source:
+    path: argo-workflows/overlays/prod
+    repoURL: https://github.com/AICoE/internal-data-hub.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - Validate=false
