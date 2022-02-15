@@ -5,7 +5,6 @@ resources:
 - dh-psi-monitoring.yaml
 - dh-prod-kafka.yaml
 - dh-stage-kafka.yaml
-- dh-prod-rsyslog.yaml
 - dh-prod-analytics-factory.yaml
 - dh-prod-data-catalog-ccx.yaml
 - dh-stage-superset.yaml
