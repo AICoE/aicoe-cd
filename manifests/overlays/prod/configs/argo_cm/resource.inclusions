@@ -486,3 +486,11 @@
   clusters:
   - https://api.idh-stage.dev.datahub.redhat.com:6443
   - https://api.datahub-ocp4.prod.psi.redhat.com:6443
+- apiGroups:
+  - kubeflow.org
+  kinds:
+    - ScheduledWorkflow
+    - View
+  clusters:
+  - https://api.idh-stage.dev.datahub.redhat.com:6443
+  - https://api.datahub-ocp4.prod.psi.redhat.com:6443
