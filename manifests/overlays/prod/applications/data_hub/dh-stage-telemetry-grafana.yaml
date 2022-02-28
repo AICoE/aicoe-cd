@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     namespace: dh-stage-telemetry-grafana
-    server: https://api.rhods-idh.dev.datahub.redhat.com:6443
+    server: 'https://api.idh-stage.dev.datahub.redhat.com:6443'
   project: data-hub
   source:
     path: telemetry-grafana/overlays/stage
@@ -31,7 +31,7 @@ metadata:
 spec:
   destination:
     namespace: dh-stage-telemetry-grafana
-    server: https://api.rhods-idh.dev.datahub.redhat.com:6443
+    server: 'https://api.idh-stage.dev.datahub.redhat.com:6443'
   project: data-hub
   source:
     path: overlays/stage

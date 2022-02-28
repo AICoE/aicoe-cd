@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     namespace: redhat-ods-operator
-    server: https://api.rhods-idh.dev.datahub.redhat.com:6443
+    server: 'https://api.idh-stage.dev.datahub.redhat.com:6443'
   project: data-hub
   source:
     path: components/project-admin-rolebindings/data-hub
@@ -26,7 +26,7 @@ metadata:
 spec:
   destination:
     namespace: redhat-ods-operator
-    server: https://api.rhods-idh.dev.datahub.redhat.com:6443
+    server: 'https://api.idh-stage.dev.datahub.redhat.com:6443'
   project: data-hub
   source:
     path: rhods/catalog-source/overlays/stage
@@ -46,7 +46,7 @@ metadata:
 spec:
   destination:
     namespace: redhat-ods-operator
-    server: https://api.rhods-idh.dev.datahub.redhat.com:6443
+    server: 'https://api.idh-stage.dev.datahub.redhat.com:6443'
   project: data-hub
   source:
     path: rhods/ods-operator/overlays/stage
