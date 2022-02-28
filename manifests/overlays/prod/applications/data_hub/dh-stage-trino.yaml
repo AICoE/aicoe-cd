@@ -5,7 +5,7 @@ metadata:
 spec:
   destination:
     namespace: dh-stage-trino
-    server: https://api.rhods-idh.dev.datahub.redhat.com:6443
+    server: 'https://api.idh-stage.dev.datahub.redhat.com:6443'
   project: data-hub
   source:
     path: kfdefs/overlays/stage/dh-stage-trino
