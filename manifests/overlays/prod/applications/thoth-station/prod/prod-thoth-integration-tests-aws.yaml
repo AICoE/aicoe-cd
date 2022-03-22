@@ -2,16 +2,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prod-thoth-slo-reporter
+  name: prod-thoth-integration-tests-aws
 spec:
   project: thoth-stage
   source:
     repoURL: 'https://github.com/thoth-station/thoth-application.git'
-    path: slo-reporter/overlays/moc-prod-ocp4-stage
+    path: integration-tests/overlays/aws-prod-ocp4-stage
     targetRevision: master
   destination:
     server: 'https://api.ocp4.prod.psi.redhat.com:6443'
-    namespace: thoth-frontend-stage
+    namespace: aicoe-prod-bots
   syncPolicy:
     automated:
       selfHeal: true
@@ -21,6 +21,6 @@ spec:
   ignoreDifferences:
   - group: batch
     kind: CronJob
-    name: slo-reporter
+    name: integration-tests
     jsonPointers:
     - /spec/jobTemplate/spec/template/spec/containers/0/image
