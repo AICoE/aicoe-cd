@@ -4,7 +4,6 @@ resources:
 - dh-prod-jupyterhub.yaml
 - dh-psi-monitoring.yaml
 - dh-prod-kafka.yaml
-- dh-stage-kafka.yaml
 - dh-prod-analytics-factory.yaml
 - dh-prod-data-catalog-ccx.yaml
 - dh-stage-superset.yaml
