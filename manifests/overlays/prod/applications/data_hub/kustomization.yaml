@@ -7,7 +7,6 @@ resources:
 - dh-prod-analytics-factory.yaml
 - dh-prod-data-catalog-ccx.yaml
 - dh-stage-superset.yaml
-- dh-prod-argo.yaml
 - dh-stage-trino.yaml
 
 # OCP4
