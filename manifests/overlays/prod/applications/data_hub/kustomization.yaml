@@ -3,7 +3,6 @@ kind: Kustomization
 resources:
 - dh-prod-jupyterhub.yaml
 - dh-psi-monitoring.yaml
-- dh-prod-kafka.yaml
 - dh-stage-superset.yaml
 - dh-stage-trino.yaml
 
