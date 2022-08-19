@@ -1,3 +1,4 @@
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -10,6 +11,27 @@ spec:
   source:
     path: kfdefs/overlays/prod/dh-prod-trino
     repoURL: https://github.com/AICoE/internal-data-hub.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - Validate=false
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dh-prod-trino-groups
+spec:
+  destination:
+    namespace: dh-prod-trino
+    server: https://api.datahub-ocp4.prod.psi.redhat.com:6443
+  project: data-hub
+  source:
+    path: overlays/prod/
+    repoURL: https://gitlab.cee.redhat.com/data-hub/trino-group-mappings.git
     targetRevision: main
   syncPolicy:
     automated:
