@@ -5,4 +5,3 @@ resources:
 - prod-slo-reporter.yaml
 - prod-thoth-integration-tests-aws.yaml
 - prod-thoth-integration-tests.yaml
-- prod-thoth-pulp-metrics-exporter.yaml
