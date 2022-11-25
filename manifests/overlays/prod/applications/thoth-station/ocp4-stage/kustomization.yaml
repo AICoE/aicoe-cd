@@ -24,6 +24,7 @@ resources:
 - stage-thoth-kebechet.yaml
 - stage-thoth-management-api.yaml
 - stage-thoth-metrics-exporter.yaml
+- stage-thoth-monitoring.yaml
 - stage-thoth-package-extract.yaml
 - stage-thoth-package-releases.yaml
 - stage-thoth-package-update.yaml
