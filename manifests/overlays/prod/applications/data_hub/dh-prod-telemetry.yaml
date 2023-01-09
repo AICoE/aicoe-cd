@@ -21,5 +21,10 @@ spec:
   ignoreDifferences:
     - kind: Deployment
       name: thanos-query
-      jqPathExpressions:
-        - .spec.template.spec.containers[2].image
+      jsonPointers:
+        - /spec/template/spec/containers[2]/image
+    - kind: Deployment
+      name: thanos-replicate-custom-exporter
+      jsonPointers:
+        - /spec/template/spec/containers[0]/image
+
