@@ -18,3 +18,8 @@ spec:
     automated:
       prune: true
       selfHeal: true
+  ignoreDifferences:
+    - kind: Deployment
+      name: thanos-query
+      jqPathExpressions:
+        - .spec.template.spec.containers[2].image
