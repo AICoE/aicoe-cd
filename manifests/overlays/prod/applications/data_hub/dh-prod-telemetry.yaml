@@ -20,11 +20,13 @@ spec:
       selfHeal: true
   ignoreDifferences:
     - kind: Deployment
+      group: apps
       name: thanos-query
       jsonPointers:
-        - /spec/template/spec/containers[2]/image
+        - /spec/template/spec/containers/2/image
     - kind: Deployment
+      group: apps
       name: thanos-replicate-custom-exporter
       jsonPointers:
-        - /spec/template/spec/containers[0]/image
+        - /spec/template/spec/containers/0/image
 
