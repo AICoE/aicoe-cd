@@ -1,0 +1,20 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dh-prod-telemetry
+spec:
+  destination:
+    namespace: dh-prod-telemetry
+    server: https://api.datahub-ocp4.prod.psi.redhat.com:6443
+  project: data-hub
+  source:
+    path: overlays/prod
+    repoURL: https://gitlab.cee.redhat.com/data-hub/dh-telemetry.git
+    targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+      - Validate=false
+    automated:
+      prune: true
+      selfHeal: true
