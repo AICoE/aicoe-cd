@@ -8,10 +8,6 @@ resources:
 # OCP4
 - dh-prod-argo.ocp4.yaml
 - dh-prod-thanos-extractor.ocp4.yaml
-- redhat-ods-applications.yaml
-- redhat-ods-applications-stage.yaml
-- redhat-ods-monitoring.yaml
-- redhat-ods-monitoring-stage.yaml
 - redhat-ods-operator.yaml
 - redhat-ods-operator-stage.yaml
 - dh-stage-telemetry-grafana.yaml

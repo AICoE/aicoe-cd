@@ -29,4 +29,3 @@ spec:
       name: thanos-replicate-custom-exporter
       jsonPointers:
         - /spec/template/spec/containers/0/image
-
