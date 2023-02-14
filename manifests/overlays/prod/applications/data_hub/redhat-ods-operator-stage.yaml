@@ -2,46 +2,6 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: permissions.redhat-ods-operator-stage
-spec:
-  destination:
-    namespace: redhat-ods-operator
-    server: 'https://api.idh-stage.dev.datahub.redhat.com:6443'
-  project: data-hub
-  source:
-    path: components/project-admin-rolebindings/data-hub
-    repoURL: https://github.com/AICoE/internal-data-hub.git
-    targetRevision: main
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-    - Validate=false
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: catalog-source.redhat-ods-operator-stage
-spec:
-  destination:
-    namespace: redhat-ods-operator
-    server: 'https://api.idh-stage.dev.datahub.redhat.com:6443'
-  project: data-hub
-  source:
-    path: rhods/catalog-source/overlays/stage
-    repoURL: https://github.com/AICoE/internal-data-hub.git
-    targetRevision: main
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-    - Validate=false
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
   name: application.redhat-ods-operator-stage
 spec:
   destination:
