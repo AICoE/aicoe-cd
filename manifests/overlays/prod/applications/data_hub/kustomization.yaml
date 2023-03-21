@@ -6,7 +6,6 @@ resources:
 - dh-stage-trino.yaml
 
 # OCP4
-- dh-prod-argo.ocp4.yaml
 - dh-prod-thanos-extractor.ocp4.yaml
 - redhat-ods-operator.yaml
 - redhat-ods-operator-stage.yaml
