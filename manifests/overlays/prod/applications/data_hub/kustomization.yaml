@@ -20,3 +20,4 @@ resources:
 - dh-prod-superset.ocp4.yaml
 - dh-prod-s3-webserver.yaml
 - dh-prod-telemetry.yaml
+- dh-prod-s3-sync-pipelines.yaml
