@@ -15,7 +15,6 @@ resources:
 - dh-prod-obslytics.ocp4.yaml
 - dh-prod-trino.ocp4.yaml
 - dh-prod-monitoring.yaml
-- dh-prod-monitoring-grafana.yaml
 - dh-prod-superset.ocp4.yaml
 - dh-prod-s3-webserver.yaml
 - dh-prod-telemetry.yaml
