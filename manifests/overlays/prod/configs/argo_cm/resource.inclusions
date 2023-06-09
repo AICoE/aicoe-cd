@@ -10,7 +10,6 @@
 - apiGroups:
   - tekton.dev
   kinds:
-  - Condition
   - Pipeline
   - PipelineResource
   - Task
@@ -18,6 +17,13 @@
   - https://api.ocp4.prod.psi.redhat.com:6443
   - https://k-openshift.osh.massopen.cloud:8443/
   - https://api.datahub-ocp4.prod.psi.redhat.com:6443
+- apiGroups:
+  - tekton.dev
+  kinds:
+  - Condition
+  clusters:
+  - https://api.ocp4.prod.psi.redhat.com:6443
+  - https://k-openshift.osh.massopen.cloud:8443/
 - apiGroups:
   - triggers.tekton.dev
   kinds:
