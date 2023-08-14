@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dh-prod-obslytics.ocp4
+  name: dh-prod-trino-partition-updater
 spec:
   destination:
-    namespace: dh-prod-thanos-extractor
+    namespace: dh-prod-trino
     server: https://api.datahub-ocp4.prod.psi.redhat.com:6443
   project: data-hub
   source:
-    path: obslytics/overlays/ocp4-migration
+    path: trino-partition-updater/overlays/prod
     repoURL: https://github.com/AICoE/internal-data-hub.git
     targetRevision: main
   syncPolicy:
@@ -16,4 +16,4 @@ spec:
       prune: true
       selfHeal: true
     syncOptions:
-    - Validate=false
+      - Validate=false
