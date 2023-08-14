@@ -6,16 +6,15 @@ resources:
 - dh-stage-trino.yaml
 
 # OCP4
-- dh-prod-thanos-extractor.ocp4.yaml
 - redhat-ods-operator.yaml
 - redhat-ods-operator-stage.yaml
 - dh-stage-telemetry-grafana.yaml
 - dh-sandbox-telemetry-grafana.yaml
 - dh-prod-telemetry-grafana.yaml
-- dh-prod-obslytics.ocp4.yaml
 - dh-prod-trino.ocp4.yaml
 - dh-prod-monitoring.yaml
 - dh-prod-superset.ocp4.yaml
 - dh-prod-s3-webserver.yaml
 - dh-prod-telemetry.yaml
 - dh-prod-s3-sync-pipelines.yaml
+- dh-prod-trino-partition-updater.yaml
