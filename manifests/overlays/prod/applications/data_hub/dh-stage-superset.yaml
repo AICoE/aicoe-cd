@@ -8,7 +8,7 @@ spec:
     server: https://api.datahub-ocp4.prod.psi.redhat.com:6443
   project: data-hub
   source:
-    path: kfdefs/overlays/stage/dh-stage-superset
+    path: superset/overlays/stage
     repoURL: https://github.com/AICoE/internal-data-hub.git
     targetRevision: main
   syncPolicy:
