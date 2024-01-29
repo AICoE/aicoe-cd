@@ -3,12 +3,9 @@ kind: Kustomization
 resources:
 - dh-psi-monitoring.yaml
 - dh-stage-superset.yaml
-- dh-stage-trino.yaml
 
 # OCP4
 - redhat-ods-operator.yaml
-- redhat-ods-operator-stage.yaml
-- dh-stage-telemetry-grafana.yaml
 - dh-sandbox-telemetry-grafana.yaml
 - dh-prod-telemetry-grafana.yaml
 - dh-prod-trino.ocp4.yaml
