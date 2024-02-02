@@ -2,7 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - dh-psi-monitoring.yaml
-- dh-stage-superset.yaml
 
 # OCP4
 - redhat-ods-operator.yaml
